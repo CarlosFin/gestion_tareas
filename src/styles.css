@@ -2,7 +2,7 @@
 :root{
 
   /* Colores de botones */
-  --primary-bg: #106cfc;
+  --primary-bg: #0463fd;
   --succes-bg: #208454;
   --danger-bg: #e03444;
   --dark-bg: #28242c;
@@ -10,16 +10,25 @@
   /* Color card */
   --card-color: #fcf4fc;
 
-  /* tipo de letra inter */
+  /* Tipo de letra inter */
   --letra-inter: "Inter", sans-serif;
   --letra-tamano-inter: 1rem;
 
-  /* tipo de letra rajdhani */
+  /* Tipo de letra rajdhani */
   --letra-raj: "Rajdhani", sans-serif;
   --letra-tamano-raj: 1rem;
   --letra: 400;
 
   /* Bordes */
   --bordes-red: 5px;
+
+  /* Modo oscuro */
+  --oscuro--bg: var(--dark-bg);
+  --oscuro-letra: #ffffff;
+  --oscuro-card: #706360;
+  --oscuro-primary: rgb(6, 26, 92);
+  --oscuro-succes: rgb(2, 38, 18);
+  --oscuro-danger: rgb(62, 2, 2);
+  --oscuro-dark: rgb(58, 54, 54);
 
 }
