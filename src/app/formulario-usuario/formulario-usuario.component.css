@@ -1,0 +1,15 @@
+form{
+  margin-top: 2rem;
+}
+
+@media (max-width: 576px) {
+  form {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 922px) {
+  form {
+    margin-top: -5rem;
+  }
+}
