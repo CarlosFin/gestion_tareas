@@ -1,0 +1,10 @@
+.info{
+  background-color: var(--primary-bg);
+  width: 23px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.mas{
+  color: var(--white-bg);
+}

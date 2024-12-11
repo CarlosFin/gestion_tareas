@@ -1,0 +1,53 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--card-user-claro);
+  color: var(--dark-bg);
+  width: 50%;
+  height: 4rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.user{
+  border-right: 1px solid var(--dark-bg);
+}
+
+.img_user{
+  width: 4rem;
+  height: 4rem;
+  padding-top: 0.3rem;
+}
+
+.perfil{
+  display: flex;
+  flex-direction: row;
+}
+
+.parrafo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.tareas{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  align-items: end;
+  border-left: 1px solid var(--dark-bg);
+}
+
+.img_tareas{
+  width: 4rem;
+  height: 4rem;
+}
+
+@media (max-width: 576px) {
+  .container{
+    width: 90%;
+  }
+}
+
+
