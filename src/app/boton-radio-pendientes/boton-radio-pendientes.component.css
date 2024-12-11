@@ -2,3 +2,8 @@
   margin-left: 2rem;
   margin-top: 2rem;
 }
+
+label{
+  font-family: var(--letra-inter);
+  font-size: var(--letra-tamano-inter);
+}

@@ -1,3 +1,13 @@
+.color-header{
+  background-color: var(--color-header-claro);
+}
+
+li a{
+  font-family: var(--letra-inter);
+  font-size: var(--letra-tamano-inter);
+  color: var(--dark-bg);
+}
+
 .img_logo {
   width: 3rem;
 }
