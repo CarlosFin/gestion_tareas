@@ -32,3 +32,10 @@
   --oscuro-dark: rgb(58, 54, 54);
 
 }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
