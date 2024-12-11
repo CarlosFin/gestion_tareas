@@ -10,6 +10,7 @@ import { FormularioTareaComponent } from './formulario-tarea/formulario-tarea.co
 import { BotonRadioPendientesComponent } from './boton-radio-pendientes/boton-radio-pendientes.component';
 import { BotonRadioTerminadasComponent } from './boton-radio-terminadas/boton-radio-terminadas.component';
 import { BotonRadioTodasComponent } from './boton-radio-todas/boton-radio-todas.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BotonRadioTodasComponent } from './boton-radio-todas/boton-radio-todas.
     FormularioTareaComponent,
     BotonRadioPendientesComponent,
     BotonRadioTerminadasComponent,
-    BotonRadioTodasComponent
+    BotonRadioTodasComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
