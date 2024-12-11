@@ -1,14 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-:root{
+:root {
 
   /* Colores de botones */
   --primary-bg: #0463fd;
   --succes-bg: #208454;
   --danger-bg: #e03444;
   --dark-bg: #28242c;
+  --white-bg: white;
+
+  /* Color header */
+  --color-header-claro: rgb(240, 187, 187);
+  --color-header-oscuro: rgb(50, 35, 35);
 
   /* Color card */
-  --card-color: #fcf4fc;
+  --card-color-claro: #fcf4fc;
+  --card-color-oscuro: rgb(75, 59, 80);
+  --card-user-claro: #fcecd4;
+  --card-user-oscuro: rgb(79, 84, 73);
 
   /* Tipo de letra inter */
   --letra-inter: "Inter", sans-serif;
@@ -25,17 +33,26 @@
   /* Modo oscuro */
   --oscuro--bg: var(--dark-bg);
   --oscuro-letra: #ffffff;
-  --oscuro-card: #706360;
+  --oscuro-card: var(--card-color-oscuro);
   --oscuro-primary: rgb(6, 26, 92);
   --oscuro-succes: rgb(2, 38, 18);
   --oscuro-danger: rgb(62, 2, 2);
   --oscuro-dark: rgb(58, 54, 54);
 
+  /* Modo claro */
+  --claro--bg: var(--white-bg);
+  --claro-letra: black;
+  --claro-card: var(--card-color-claro);
+  --claro-primary: var(--primary-bg);
+  --claro-succes: var(--success-bg);
+  --claro-danger: var(--danger-bg);
+  --claro-dark: var(--dark-bg);
 }
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
