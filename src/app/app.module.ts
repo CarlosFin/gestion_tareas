@@ -4,7 +4,8 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { PrimaryButtonComponent } from './primary-button/primary-button.component';
-import { AppRoutingModule } from './app-routing.module'; // Importa el módulo de enrutamiento
+import { AppRoutingModule } from './app-routing.module';
+import { CardComponent } from './card/card.component'; // Importa el módulo de enrutamiento
 import { HeaderComponent } from './header/header.component';
 import { CardUserComponent } from './card-user/card-user.component';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
@@ -22,6 +23,7 @@ import { BotonInfoComponent } from './boton-info/boton-info.component';
   declarations: [
     AppComponent,
     PrimaryButtonComponent,
+    CardComponent,
     HeaderComponent,
     CardUserComponent,
     FormularioUsuarioComponent,
@@ -33,7 +35,8 @@ import { BotonInfoComponent } from './boton-info/boton-info.component';
     BotonSuccessComponent,
     BotonDangerComponent,
     BotonDarkComponent,
-    BotonInfoComponent
+    BotonInfoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
