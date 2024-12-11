@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { PrimaryButtonComponent } from './primary-button/primary-button.component';
