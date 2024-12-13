@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { PrimaryButtonComponent } from './primary-button/primary-button.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CardComponent } from './card/card.component'; // Importa el módulo de enrutamiento
 import { HeaderComponent } from './header/header.component';
@@ -21,7 +20,6 @@ import { BotonInfoComponent } from './boton-info/boton-info.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PrimaryButtonComponent,
     CardComponent,
     HeaderComponent,
     CardUserComponent,
