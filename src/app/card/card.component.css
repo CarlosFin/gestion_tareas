@@ -32,3 +32,11 @@
 .buttons button { margin: 0 10px; }
 
 .buttons button span { margin: 5px; }
+
+card:last-child {
+  font-size: 24px;
+}
+
+.card:not(:last-child) {
+  font-size: 36px
+}
