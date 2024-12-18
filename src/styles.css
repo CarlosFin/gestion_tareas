@@ -6,7 +6,7 @@
   --succes-bg: #208454;
   --danger-bg: #e03444;
   --dark-bg: #28242c;
-  --white-bg: white;
+  --white-bg: rgb(255,255, 255);
 
   /* Color header */
   --color-header-claro: rgb(240, 187, 187);
@@ -41,7 +41,7 @@
 
   /* Modo claro */
   --claro--bg: var(--white-bg);
-  --claro-letra: black;
+  --claro-letra: rgb(0, 0, 0);
   --claro-card: var(--card-color-claro);
   --claro-primary: var(--primary-bg);
   --claro-succes: var(--success-bg);

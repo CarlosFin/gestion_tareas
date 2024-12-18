@@ -16,6 +16,7 @@ import { BotonSuccessComponent } from './boton-success/boton-success.component';
 import { BotonDangerComponent } from './boton-danger/boton-danger.component';
 import { BotonDarkComponent } from './boton-dark/boton-dark.component';
 import { BotonInfoComponent } from './boton-info/boton-info.component';
+import { ModoClaroOscuroComponent } from './modo-claro-oscuro/modo-claro-oscuro.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BotonInfoComponent } from './boton-info/boton-info.component';
     BotonDangerComponent,
     BotonDarkComponent,
     BotonInfoComponent,
-    CardComponent
+    CardComponent,
+    ModoClaroOscuroComponent,
   ],
   imports: [
     BrowserModule,
