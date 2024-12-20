@@ -1,0 +1,23 @@
+<img src="../../assets/img/defaultUser.png" alt="" [style.display]="fotoD">
+<div>
+  <label for="nombre" class="form-label">Nombre completo</label>
+  <input type="text" class="form-control" id="nombre" [readonly]="nombreR" /></div>
+<div>
+  <label for="departamento" class="form-label">Departanmento</label>
+  <input type="text" class="form-control" id="departamento" [readonly]="departamentoR"/>
+</div>
+<div>
+  <label for="email" class="form-label">Correo electronico</label>
+  <input type="email" class="form-control" id="email" [readonly]="emailR"/>
+</div>
+<div>
+  <label for="password" class="form-label">Contraseña</label>
+  <input type="text" class="form-control" id="password" [readonly]="contraR"/>
+</div>
+<div>
+  <label for="rep_password" class="form-label">Repetir contraseña</label>
+  <input type="text" class="form-control" id="rep_password" [readonly]="ccontraR"/>
+</div>
+<div>
+  <input type="file" class="form-control" [style.display]="imagenD"/>
+</div>

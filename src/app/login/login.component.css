@@ -2,6 +2,7 @@
   background-color: var(--card-color-claro);
   display: flex;
   flex-direction: column;
+
 }
 
 .logo{
@@ -25,4 +26,8 @@ form{
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
+}
+
+.boton{
+  margin-top: 10px;
 }
