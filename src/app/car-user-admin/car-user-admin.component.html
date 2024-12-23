@@ -1,22 +1,22 @@
 <!-- <div class="card"> -->
-<div class="card" *ngFor="let tarea of tareas">
+<div class="card" *ngFor="let usuario of usuarios">
 
   <div class="TitleDescription">
-    <div class="title">{{tarea.titulo}}</div>
-    <div class="description">{{tarea.descripcion | slice:0:85 }}...</div>
+    <div class="title">{{usuario.nombre}}</div>
+    <div class="description">{{usuario.departamento}}</div>
   </div>
 
   <div class="buttons">
 
-    <button>
+    <button style="font-size: 36px">
       <i class="material-icons">visibility</i>
     </button>
 
-    <button>
+    <button style="font-size: 36px">
       <i class="material-icons">mode_edit</i>
     </button>
 
-    <button [style.display]="visualizacion">
+    <button style="font-size:36px">
       <i class="material-icons">delete</i>
     </button>
 

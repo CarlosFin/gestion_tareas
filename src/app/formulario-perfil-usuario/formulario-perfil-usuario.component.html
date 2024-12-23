@@ -3,8 +3,10 @@
     <app-header></app-header>
   </div>
   <div class="formulario">
-    <app-formulario></app-formulario>
-    <app-boton-dark [textoBoton]="actualizar"></app-boton-dark>
+    <app-formulario [nombreR]="nombreRead" [departamentoR]="departamentoRead" [emailR]="emailRead" [contraR]="contraRead" [ccontraR]="ccontraRead" [imagenD]="imagenDisplay" [fotoD]="fotoDisplay"></app-formulario>
+    <div class="separar">
+      <app-boton-dark [textoBoton]="actualizar"></app-boton-dark>
+    </div>
     <app-boton-dark [textoBoton]="cancelar"></app-boton-dark>
   </div>
 </div>

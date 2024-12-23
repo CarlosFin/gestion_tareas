@@ -29,6 +29,10 @@ h1 {
     justify-content: end;
     margin-right: 4rem;
   }
+
+  h1 {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 577px) and (max-width: 922px) {
@@ -37,5 +41,9 @@ h1 {
     flex-direction: row;
     justify-content: end;
     margin-right: 8rem;
+  }
+
+  h1{
+    margin: 0 auto;
   }
 }

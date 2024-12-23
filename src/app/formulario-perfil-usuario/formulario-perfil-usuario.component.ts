@@ -10,4 +10,14 @@ export class FormularioPerfilUsuarioComponent {
 
   actualizar: string = 'Actualizar';
   cancelar: string = 'Cancelar';
+
+  nombreRead: boolean = false;
+  departamentoRead: boolean = true;
+  emailRead: boolean = false;
+  contraRead: boolean = false;;
+  ccontraRead: boolean = false;;
+
+  imagenDisplay: string = 'block';
+  fotoDisplay: string = 'block';
+
 }

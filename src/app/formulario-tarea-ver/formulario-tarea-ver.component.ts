@@ -9,4 +9,10 @@ export class FormularioTareaVerComponent {
   textoBoton: string = '';
 
   regresar: string = 'Regresar';
+
+  tareaRead: boolean = true;
+  descripcionRead: boolean = true;
+  emailRead: boolean = true;
+  usuarioRead: boolean = true;
+  departamentoRead: boolean = true;
 }

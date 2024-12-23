@@ -10,4 +10,13 @@ export class FormularioUsuarioEditarComponent {
 
   editar: string = 'Actualizar';
   cancelar: string = 'Cancelar';
+
+  nombreRead: boolean = false;
+  departamentoRead: boolean = false;
+  emailRead: boolean = false;
+  contraRead: boolean = false;
+  ccontraRead: boolean = false;
+
+  imagenDisplay: string = 'block';
+  fotoDisplay: string = 'block';
 }

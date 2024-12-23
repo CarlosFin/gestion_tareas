@@ -10,4 +10,10 @@ export class FormularioTareaComponent {
 
   crear: string = 'Crear';
   cancelar: string = 'Cancelar';
+
+  tareaRead: boolean = false;
+  descripcionRead: boolean = false;
+  emailRead: boolean = false;
+  usuarioRead: boolean = false;
+  departamentoRead: boolean = false;
 }

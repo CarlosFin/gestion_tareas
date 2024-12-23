@@ -10,4 +10,13 @@ export class FormularioUsuarioComponent {
 
   crear: string = 'Crear';
   cancelar: string = 'Cancelar';
+
+  nombreRead: boolean = true;
+  departamentoRead: boolean = true;
+  emailRead: boolean = true;
+  contraRead: boolean = true;
+  ccontraRead: boolean = true;
+
+  imagenDisplay: string = 'none';
+  fotoDisplay: string = 'block';
 }

@@ -1,13 +1,17 @@
 <app-header></app-header>
 
-<app-card-user></app-card-user>
+<!-- <app-login  (datosEnviados)="recibirDatos($event)"></app-login> -->
+<app-card-user [datos]="datosRecibidos"></app-card-user>
 
 <div class="centrado">
-  <app-boton-success [textoBoton]="entrada"></app-boton-success>
-  <app-boton-success [textoBoton]="salida"></app-boton-success>
+  <app-boton-success [textoBoton]="entrada" (click)="mostrarHora()" *ngIf="!hora"></app-boton-success>
+  <app-boton-success [textoBoton]="salida" (click)="mostrarHoraF()" *ngIf="!horaF"></app-boton-success>
 </div>
 
 <h1>{{listado_tareas}}</h1>
+
+<p>{{ hora }}</p>
+<p>{{ horaF }}</p>
 
 <app-card [visualizacion]="visualizacion"></app-card>
 

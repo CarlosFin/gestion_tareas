@@ -27,6 +27,9 @@ import { ListaUsuariosAdminComponent } from './lista-usuarios-admin/lista-usuari
 import { FormularioPerfilUsuarioComponent } from './formulario-perfil-usuario/formulario-perfil-usuario.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormularioGenericoTareaComponent } from './formulario-generico-tarea/formulario-generico-tarea.component';
+import { FormularioTareaEditarAdminComponent } from './formulario-tarea-editar-admin/formulario-tarea-editar-admin.component';
+import { CarUserAdminComponent } from './car-user-admin/car-user-admin.component';
+import { ListaTareaAdminComponent } from './lista-tarea-admin/lista-tarea-admin.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { FormularioGenericoTareaComponent } from './formulario-generico-tarea/fo
     FormularioPerfilUsuarioComponent,
     FormularioComponent,
     FormularioGenericoTareaComponent,
+    FormularioTareaEditarAdminComponent,
+    CarUserAdminComponent,
+    ListaTareaAdminComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

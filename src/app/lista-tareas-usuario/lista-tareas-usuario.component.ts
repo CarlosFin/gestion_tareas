@@ -13,4 +13,23 @@ export class ListaTareasUsuarioComponent {
   salida: string = 'Fin turno';
 
   visualizacion: string = 'none';
+
+  datosRecibidos: { nombre: string; password: string } | null = null;
+  recibirDatos(datos: { nombre: string; password: string }) {
+    this.datosRecibidos = datos;
+  }
+
+  hora: string = ''; // Esta variable contendrá la hora actual
+  horaF: string = ''; // Esta variable contendrá la hora actual
+
+  // Función para obtener la hora actual
+  mostrarHora() {
+    const ahora = new Date();
+    this.hora = ahora.toLocaleTimeString(); // Formato de la hora en cadena
+  }
+  // Función para obtener la hora actual
+  mostrarHoraF() {
+    const ahora = new Date();
+    this.horaF = ahora.toLocaleTimeString(); // Formato de la hora en cadena
+  }
 }

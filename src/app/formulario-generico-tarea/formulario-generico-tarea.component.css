@@ -4,6 +4,13 @@ label {
 }
 
 input {
-    font-family: var(--letra-raj);
-    font-size: var(--letra-tamano-raj);
+  width: 30rem;
+  font-family: var(--letra-raj);
+  font-size: var(--letra-tamano-raj);
+}
+
+@media (max-width: 576px) {
+  input {
+    width: 100%;
+  }
 }

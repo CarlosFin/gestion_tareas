@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-formulario-tarea-editar',
-  templateUrl: './formulario-tarea-editar.component.html',
-  styleUrls: ['./formulario-tarea-editar.component.css'],
+  selector: 'app-formulario-tarea-editar-admin',
+  templateUrl: './formulario-tarea-editar-admin.component.html',
+  styleUrls: ['./formulario-tarea-editar-admin.component.css'],
 })
-export class FormularioTareaEditarComponent {
+export class FormularioTareaEditarAdminComponent {
   textoBoton: string = '';
 
   actualizar: string = 'Actualizar';
@@ -15,5 +15,5 @@ export class FormularioTareaEditarComponent {
   descripcionRead: boolean = false;
   emailRead: boolean = false;
   usuarioRead: boolean = false;
-  departamentoRead: boolean = true;
+  departamentoRead: boolean = false;
 }
