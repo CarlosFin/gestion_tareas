@@ -38,8 +38,7 @@ p { margin: 0; }
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
+.toolbar #twitter-logo:hover, .toolbar #youtube-logo:hover {
   opacity: 0.8;
 }
 
@@ -145,9 +144,7 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  color: #125699;
-}
+a:hover { color: #125699; }
 
 .terminal {
   position: relative;
@@ -277,7 +274,7 @@ svg#clouds {
   }
 }
 
-h1{
+h1 {
   font-family: var(--letra-raj);
   font-size: var(--letra-tamano-raj);
   font-weight: var(--letra);

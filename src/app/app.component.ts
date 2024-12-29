@@ -8,6 +8,8 @@ import { ModoClaroOscuroService } from './modo-claro-oscuro/modo-claro-oscuro.se
 })
 export class AppComponent implements OnInit {
 
+  title: string = "";
+
   constructor (private themeService: ModoClaroOscuroService, private renderer: Renderer2) {}
 
   ngOnInit(): void {
