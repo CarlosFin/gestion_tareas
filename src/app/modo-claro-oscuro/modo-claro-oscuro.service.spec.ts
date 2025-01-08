@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { ModoClaroOscuroService } from './modo-claro-oscuro.service';
 
 describe('ModoClaroOscuroService', () => {
