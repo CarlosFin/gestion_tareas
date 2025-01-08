@@ -28,7 +28,7 @@ import { FormularioPerfilUsuarioComponent } from './formulario-perfil-usuario/fo
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormularioGenericoTareaComponent } from './formulario-generico-tarea/formulario-generico-tarea.component';
 import { FormularioTareaEditarAdminComponent } from './formulario-tarea-editar-admin/formulario-tarea-editar-admin.component';
-import { CarUserAdminComponent } from './car-user-admin/car-user-admin.component';
+import { CarUserAdminComponent } from './card-user-admin/card-user-admin.component';
 import { ListaTareaAdminComponent } from './lista-tarea-admin/lista-tarea-admin.component';
 
 @NgModule({

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-car-user-admin',
-  templateUrl: './car-user-admin.component.html',
-  styleUrls: ['./car-user-admin.component.css'],
+  selector: 'app-card-user-admin',
+  templateUrl: './card-user-admin.component.html',
+  styleUrls: ['./card-user-admin.component.css'],
 })
-export class CarUserAdminComponent {
+export class CardUserAdminComponent {
   usuarios = [
     { nombre: 'Juan', departamento: 'Aministracion' },
     { nombre: 'Ana', departamento: 'Mantenimiento' },
