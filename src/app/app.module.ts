@@ -30,6 +30,7 @@ import { FormularioGenericoTareaComponent } from './formulario-generico-tarea/fo
 import { FormularioTareaEditarAdminComponent } from './formulario-tarea-editar-admin/formulario-tarea-editar-admin.component';
 import { CarUserAdminComponent } from './car-user-admin/car-user-admin.component';
 import { ListaTareaAdminComponent } from './lista-tarea-admin/lista-tarea-admin.component';
+import { BotonInfoUsuariosAdminComponent } from './boton-info-usuarios-admin/boton-info-usuarios-admin.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ListaTareaAdminComponent } from './lista-tarea-admin/lista-tarea-admin.
     FormularioTareaEditarAdminComponent,
     CarUserAdminComponent,
     ListaTareaAdminComponent,
+    BotonInfoUsuariosAdminComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

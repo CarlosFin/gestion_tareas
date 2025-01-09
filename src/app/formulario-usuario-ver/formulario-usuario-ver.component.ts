@@ -10,12 +10,15 @@ export class FormularioUsuarioVerComponent {
 
   regresar: string = 'Regresar';
 
-  nombreRead: boolean = false;
-  departamentoRead: boolean = false;
-  emailRead: boolean = false;
-  contraRead: boolean = false;
-  ccontraRead: boolean = false;
+  nombreRead: boolean = true;
+  departamentoRead: boolean = true;
+  emailRead: boolean = true;
+  contraRead: boolean = true;
+  ccontraRead: boolean = true;
 
   imagenDisplay: string = 'bolck';
   fotoDisplay: string = 'none';
+
+  contraDisplay: string = 'none';
+  ccontraDisplay: string = 'none';
 }
