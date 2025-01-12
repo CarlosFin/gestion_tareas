@@ -5,7 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
 })
-
 export class FormularioComponent {
   @Input() nombreR: boolean = false;
   @Input() departamentoR: boolean = false;
@@ -16,4 +15,6 @@ export class FormularioComponent {
   @Input() imagenD: string = 'block';
   @Input() fotoD: string = 'block';
 
+  @Input() contraRD: string = 'block';
+  @Input() ccontraRD: string = 'block';
 }
