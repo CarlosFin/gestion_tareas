@@ -5,7 +5,7 @@
 
 <div class="centrado">
   <app-boton-success [textoBoton]="entrada" (click)="mostrarHora()" *ngIf="!hora"></app-boton-success>
-  <app-boton-success [textoBoton]="salida" (click)="mostrarHoraF()" *ngIf="!horaF"></app-boton-success>
+  <app-boton-danger [textoBoton2]="salida" (click)="mostrarHoraF()" *ngIf="!horaF"></app-boton-danger>
 </div>
 
 <h1>{{listado_tareas}}</h1>

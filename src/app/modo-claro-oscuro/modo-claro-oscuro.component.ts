@@ -6,6 +6,7 @@ import { ModoClaroOscuroService } from './modo-claro-oscuro.service';
   templateUrl: './modo-claro-oscuro.component.html',
   styleUrls: ['./modo-claro-oscuro.component.css']
 })
+
 export class ModoClaroOscuroComponent implements OnInit {
 
   theme: string = 'bootstrap';

@@ -5,9 +5,9 @@
   <div class="formulario">
     <app-formulario [nombreR]="nombreRead" [departamentoR]="departamentoRead" [emailR]="emailRead" [contraR]="contraRead" [ccontraR]="ccontraRead" [imagenD]="imagenDisplay" [fotoD]="fotoDisplay"></app-formulario>
     <div class="separar">
-      <app-boton-dark [textoBoton]="crear"></app-boton-dark>
+      <app-boton-success [textoBoton]="crear"></app-boton-success>
     </div>
-    <app-boton-dark [textoBoton]="cancelar"></app-boton-dark>
+    <app-boton-dark [textoBoton]="cancelar" routerLink="/lista-usuario-admin"></app-boton-dark>
   </div>
 </div>
 

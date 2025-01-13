@@ -2,13 +2,13 @@
 <div class="card" *ngFor="let tarea of tareas">
 
   <div class="TitleDescription">
-    <div class="title">{{tarea.titulo}}</div>
+    <div class="title">{{tarea.nombre}}</div>
     <div class="description">{{tarea.descripcion | slice:0:85 }}...</div>
   </div>
 
   <div class="buttons">
 
-    <button routerLink="/formulario-tarea-ver">
+    <button [routerLink]="['/formulario-tarea-ver', tarea.id]" [queryParams]="{ nombre: tarea.nombre, descripcion: tarea.descripcion, correo: tarea.correo, usuario: tarea.usuario, departamento: tarea.departamento }">
       <i class="material-icons">visibility</i>
     </button>
 
@@ -23,4 +23,3 @@
   </div>
 
 </div>
-

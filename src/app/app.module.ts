@@ -9,9 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { CardUserComponent } from './card-user/card-user.component';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 import { FormularioTareaComponent } from './formulario-tarea/formulario-tarea.component';
-import { BotonRadioPendientesComponent } from './boton-radio-pendientes/boton-radio-pendientes.component';
-import { BotonRadioTerminadasComponent } from './boton-radio-terminadas/boton-radio-terminadas.component';
-import { BotonRadioTodasComponent } from './boton-radio-todas/boton-radio-todas.component';
 import { LoginComponent } from './login/login.component';
 import { BotonSuccessComponent } from './boton-success/boton-success.component';
 import { BotonDangerComponent } from './boton-danger/boton-danger.component';
@@ -28,7 +25,7 @@ import { FormularioPerfilUsuarioComponent } from './formulario-perfil-usuario/fo
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormularioGenericoTareaComponent } from './formulario-generico-tarea/formulario-generico-tarea.component';
 import { FormularioTareaEditarAdminComponent } from './formulario-tarea-editar-admin/formulario-tarea-editar-admin.component';
-import { CarUserAdminComponent } from './car-user-admin/car-user-admin.component';
+import { CardUserAdminComponent } from './card-user-admin/card-user-admin.component';
 import { ListaTareaAdminComponent } from './lista-tarea-admin/lista-tarea-admin.component';
 import { BotonInfoUsuariosAdminComponent } from './boton-info-usuarios-admin/boton-info-usuarios-admin.component';
 
@@ -39,9 +36,6 @@ import { BotonInfoUsuariosAdminComponent } from './boton-info-usuarios-admin/bot
     CardUserComponent,
     FormularioUsuarioComponent,
     FormularioTareaComponent,
-    BotonRadioPendientesComponent,
-    BotonRadioTerminadasComponent,
-    BotonRadioTodasComponent,
     LoginComponent,
     BotonSuccessComponent,
     BotonDangerComponent,
@@ -58,7 +52,7 @@ import { BotonInfoUsuariosAdminComponent } from './boton-info-usuarios-admin/bot
     FormularioComponent,
     FormularioGenericoTareaComponent,
     FormularioTareaEditarAdminComponent,
-    CarUserAdminComponent,
+    CardUserAdminComponent,
     ListaTareaAdminComponent,
     BotonInfoUsuariosAdminComponent,
   ],

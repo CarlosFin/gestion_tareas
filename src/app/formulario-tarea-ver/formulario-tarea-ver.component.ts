@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './formulario-tarea-ver.component.html',
   styleUrls: ['./formulario-tarea-ver.component.css'],
 })
+
 export class FormularioTareaVerComponent {
   textoBoton: string = '';
 
@@ -15,4 +16,7 @@ export class FormularioTareaVerComponent {
   emailRead: boolean = true;
   usuarioRead: boolean = true;
   departamentoRead: boolean = true;
+
+
+
 }
