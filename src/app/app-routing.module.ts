@@ -17,14 +17,14 @@ import { FormularioUsuarioEditarComponent } from './formulario-usuario-editar/fo
 const routes: Routes = [
   // { path: '', component: ListaTareaAdminComponent },
 
-  { path: '', component: ListaUsuariosAdminComponent },
+  // { path: '', component: ListaUsuariosAdminComponent },
   { path: 'lista-usuario-admin', component: ListaUsuariosAdminComponent },
   { path: 'lista-tarea-admin', component: ListaTareaAdminComponent },
   { path: 'formulario-usuario', component: FormularioUsuarioComponent },
   { path: 'formulario-usuario-ver/:id', component: FormularioUsuarioVerComponent },
   { path: 'formulario-usuario-editar', component: FormularioUsuarioEditarComponent },
 
-  // { path: '', component: ListaTareasUsuarioComponent },
+  { path: '', component: ListaTareasUsuarioComponent },
   { path: 'lista-tareas-usuario', component: ListaTareasUsuarioComponent },
   { path: 'formulario-perfil-usuario', component: FormularioPerfilUsuarioComponent },
   { path: 'formulario-tarea-ver/:id', component: FormularioTareaVerComponent },
