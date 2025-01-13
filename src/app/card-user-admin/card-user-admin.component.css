@@ -11,9 +11,8 @@
   display: flex;
   flex-direction: column;
   /*border: 1px solid lightskyblue;*/
-  padding: 30px 18% 30px 5%;
+  padding: 30px 55% 30px 5%;
   font-size: 20px;
-  margin-right: 40%;
 }
 
 .title {
@@ -30,7 +29,7 @@
 }
 
 .buttons button {
-  margin: 0 10px;
+  margin: 0 auto;
   font-size: 36px;
 }
 
