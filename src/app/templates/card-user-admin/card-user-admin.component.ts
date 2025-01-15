@@ -7,33 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CardUserAdminComponent {
   usuarios = [
-    {
-      id: 1,
-      nombre: 'Juan',
-      departamento: 'Dirección General',
-      correo: 'juan@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
-    {
-      id: 2,
-      nombre: 'Clara',
-      departamento: 'Administración',
-      correo: 'clara@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
-    {
-      id: 3,
-      nombre: 'Marcelina',
-      departamento: 'Finanzas',
-      correo: 'marcelina@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
-    {
-      id: 4,
-      nombre: 'Antonio',
-      departamento: 'Recursos Humanos',
-      correo: 'antonio@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
+    { nombre: 'Juan', departamento: 'Aministracion' },
+    { nombre: 'Ana', departamento: 'Mantenimiento' },
+    { nombre: 'Luis', departamento: 'Contabilidad' },
+    { nombre: 'Carlos', departamento: 'Contabilidad' },
   ];
 }

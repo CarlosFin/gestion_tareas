@@ -9,7 +9,7 @@ export class FormularioPerfilUsuarioComponent {
   textoBoton: string = '';
 
   actualizar: string = 'Actualizar';
-  cancelar: string = 'Regresar';
+  cancelar: string = 'Cancelar';
 
   nombreRead: boolean = false;
   departamentoRead: boolean = true;

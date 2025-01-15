@@ -5,14 +5,13 @@
 
 <div class="centrado">
   <app-boton-success [textoBoton]="entrada" (click)="mostrarHora()" *ngIf="!hora"></app-boton-success>
-  <p *ngIf="hora">Inicio turno: {{ hora }}</p>
-
-  <app-boton-danger [textoBoton2]="salida" (click)="mostrarHoraF()" *ngIf="!horaF"></app-boton-danger>
-  <p *ngIf="horaF">Fin turno: {{ horaF }}</p>
-
+  <app-boton-success [textoBoton]="salida" (click)="mostrarHoraF()" *ngIf="!horaF"></app-boton-success>
 </div>
 
 <h1>{{listado_tareas}}</h1>
+
+<p>{{ hora }}</p>
+<p>{{ horaF }}</p>
 
 <app-card [visualizacion]="visualizacion"></app-card>
 
