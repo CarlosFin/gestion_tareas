@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ListaTareasUsuarioComponent } from './lista-tareas-usuario/lista-tareas-usuario.component';
-import { FormularioPerfilUsuarioComponent } from './formulario-perfil-usuario/formulario-perfil-usuario.component';
-import { FormularioTareaVerComponent } from './formulario-tarea-ver/formulario-tarea-ver.component';
-import { FormularioTareaEditarComponent } from './formulario-tarea-editar/formulario-tarea-editar.component';
-import { FormularioTareaComponent } from './formulario-tarea/formulario-tarea.component';
+import { ListaTareasUsuarioComponent } from './templates/lista-tareas-usuario/lista-tareas-usuario.component';
+import { FormularioPerfilUsuarioComponent } from './components/formulario-perfil-usuario/formulario-perfil-usuario.component';
+import { FormularioTareaVerComponent } from './components/formulario-tarea-ver/formulario-tarea-ver.component';
+import { FormularioTareaEditarComponent } from './components/formulario-tarea-editar/formulario-tarea-editar.component';
+import { FormularioTareaComponent } from './components/formulario-tarea/formulario-tarea.component';
 
-import { ListaTareaAdminComponent } from './lista-tarea-admin/lista-tarea-admin.component';
-import { ListaUsuariosAdminComponent } from './lista-usuarios-admin/lista-usuarios-admin.component';
-import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
-import { FormularioUsuarioVerComponent } from './formulario-usuario-ver/formulario-usuario-ver.component';
-import { FormularioUsuarioEditarComponent } from './formulario-usuario-editar/formulario-usuario-editar.component';
-
+import { ListaTareaAdminComponent } from './templates/lista-tarea-admin/lista-tarea-admin.component';
+import { ListaUsuariosAdminComponent } from './templates/lista-usuarios-admin/lista-usuarios-admin.component';
+import { FormularioUsuarioComponent } from './components/formulario-usuario/formulario-usuario.component';
+import { FormularioUsuarioVerComponent } from './components/formulario-usuario-ver/formulario-usuario-ver.component';
+import { FormularioUsuarioEditarComponent } from './components/formulario-usuario-editar/formulario-usuario-editar.component';
 
 const routes: Routes = [
   { path: '', component: ListaTareaAdminComponent },
