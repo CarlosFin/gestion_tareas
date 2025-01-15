@@ -28,6 +28,7 @@ import { FormularioTareaEditarAdminComponent } from './components/formulario-tar
 import { CardUserAdminComponent } from './templates/card-user-admin/card-user-admin.component';
 import { ListaTareaAdminComponent } from './templates/lista-tarea-admin/lista-tarea-admin.component';
 import { BotonInfoUsuariosAdminComponent } from './components/boton-info-usuarios-admin/boton-info-usuarios-admin.component';
+import { BotonInfoAceptarComponent } from './components/boton-info-aceptar/boton-info-aceptar.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { BotonInfoUsuariosAdminComponent } from './components/boton-info-usuario
     CardUserAdminComponent,
     ListaTareaAdminComponent,
     BotonInfoUsuariosAdminComponent,
+    BotonInfoAceptarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
