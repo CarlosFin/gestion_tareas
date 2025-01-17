@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-/*import { ThemeObiect } from '../modo-claro-oscuro/modo-claro-oscuro.service';*/
 
 @Component({
   selector: 'app-header',
