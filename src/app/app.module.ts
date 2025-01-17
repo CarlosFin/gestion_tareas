@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { HeaderComponent } from './templates/header/header.component';
 import { CardUserComponent } from './templates/card-user/card-user.component';
 import { FormularioUsuarioComponent } from './components/formulario-usuario/formulario-usuario.component';
 import { FormularioTareaComponent } from './components/formulario-tarea/formulario-tarea.component';
-import { BotonRadioPendientesComponent } from './components/boton-radio-pendientes/boton-radio-pendientes.component';
-import { BotonRadioTerminadasComponent } from './components/boton-radio-terminadas/boton-radio-terminadas.component';
-import { BotonRadioTodasComponent } from './components/boton-radio-todas/boton-radio-todas.component';
 import { LoginComponent } from './templates/login/login.component';
 import { BotonSuccessComponent } from './components/boton-success/boton-success.component';
 import { BotonDangerComponent } from './components/boton-danger/boton-danger.component';
@@ -40,9 +38,6 @@ import { BotonInfoAceptarComponent } from './components/boton-info-aceptar/boton
     CardUserComponent,
     FormularioUsuarioComponent,
     FormularioTareaComponent,
-    BotonRadioPendientesComponent,
-    BotonRadioTerminadasComponent,
-    BotonRadioTodasComponent,
     LoginComponent,
     BotonSuccessComponent,
     BotonDangerComponent,
