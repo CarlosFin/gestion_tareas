@@ -1,5 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ModoClaroOscuroComponent } from "../../modo-claro-oscuro/modo-claro-oscuro.component";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
