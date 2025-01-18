@@ -30,7 +30,10 @@ import { CardUserAdminComponent } from './templates/card-user-admin/card-user-ad
 import { ListaTareaAdminComponent } from './templates/lista-tarea-admin/lista-tarea-admin.component';
 import { BotonInfoUsuariosAdminComponent } from './components/boton-info-usuarios-admin/boton-info-usuarios-admin.component';
 import { BotonInfoAceptarComponent } from './components/boton-info-aceptar/boton-info-aceptar.component';
-
+import { ModoClaroOscuroComponent } from './modo-claro-oscuro/modo-claro-oscuro.component';
+import { BotonRadioPendientesComponent } from './components/boton-radio-pendientes/boton-radio-pendientes.component';
+import { BotonRadioTerminadasComponent } from './components/boton-radio-terminadas/boton-radio-terminadas.component';
+import { BotonRadioTodasComponent } from './components/boton-radio-todas/boton-radio-todas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +61,10 @@ import { BotonInfoAceptarComponent } from './components/boton-info-aceptar/boton
     ListaTareaAdminComponent,
     BotonInfoUsuariosAdminComponent,
     BotonInfoAceptarComponent,
+    ModoClaroOscuroComponent,
+    BotonRadioPendientesComponent,
+    BotonRadioTerminadasComponent,
+    BotonRadioTodasComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
