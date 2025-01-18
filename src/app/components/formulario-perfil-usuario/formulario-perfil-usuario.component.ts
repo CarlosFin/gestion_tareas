@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./formulario-perfil-usuario.component.css'],
 })
 export class FormularioPerfilUsuarioComponent {
+
   textoBoton: string = '';
 
   actualizar: string = 'Actualizar';
@@ -14,10 +15,9 @@ export class FormularioPerfilUsuarioComponent {
   nombreRead: boolean = false;
   departamentoRead: boolean = true;
   emailRead: boolean = false;
-  contraRead: boolean = false;;
-  ccontraRead: boolean = false;;
+  contraRead: boolean = false;
+  ccontraRead: boolean = false;
 
   imagenDisplay: string = 'block';
   fotoDisplay: string = 'block';
-
 }
