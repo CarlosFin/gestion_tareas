@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+//import { Component } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-modo-claro-oscuro',
@@ -14,14 +16,17 @@ export class ModoClaroOscuroComponent {
   enlace: HTMLCollectionOf<HTMLAnchorElement> = document.getElementsByTagName('a');
   caja: HTMLCollectionOf<HTMLDivElement> = document.getElementsByTagName('div');
 
-  toggleTheme() {
+  isDarkMode: Boolean = false;
+  indice: Number = 0;
+
+  changeTheme() {
 
     for (let i = 0; i < this.botones.length; i++) {
 
-      if (!document.getElementsByClassName('button')[i].getElementsByTagName('span')[0].classList.contains('dark')) {
+      if (!this.isDarkMode) {
 
         document.getElementsByClassName('button')[i].getElementsByTagName('span')[0].innerHTML = 'dark_mode';
-        document.getElementsByClassName('button')[i].getElementsByTagName('span')[0].className += ' dark';
+        document.getElementsByClassName('button')[i].classList.add("dark");
 
         for (let i = 0; i < this.barraNavegacion.length; i++) {
           this.barraNavegacion[i].style.backgroundColor = 'var(--color-header-oscuro)';
@@ -45,10 +50,23 @@ export class ModoClaroOscuroComponent {
           }
         }
 
+        for (let i = 0; i < this.caja.length; i++) {
+
+          if (this.caja[i].className === "buttons") {
+
+            for (let j = 0; j < this.caja[i].getElementsByTagName("button").length; j++) {
+              this.caja[i].getElementsByTagName("button")[j].style.backgroundColor = "rgb(0, 0, 0)";
+              this.caja[i].getElementsByTagName("button")[j].style.color = "rgb(255, 255, 255)";
+            }
+          }
+        }
+
+        this.isDarkMode = true;
+
       } else {
 
         document.getElementsByClassName('button')[i].getElementsByTagName('span')[0].innerHTML = 'light_mode';
-        document.getElementsByClassName('button')[i].getElementsByTagName('span')[0].className = 'material-icons';
+        document.getElementsByClassName('button')[i].classList.remove("dark");
 
         for (let i = 0; i < this.barraNavegacion.length; i++) {
           this.barraNavegacion[i].style.backgroundColor = 'var(--color-header-claro)';
@@ -71,6 +89,19 @@ export class ModoClaroOscuroComponent {
             this.caja[i].style.color = "var(--dark-bg)";
           }
         }
+
+        for (let i = 0; i < this.caja.length; i++) {
+
+          if (this.caja[i].className === "buttons") {
+
+            for (let j = 0; j < this.caja[i].getElementsByTagName("button").length; j++) {
+              this.caja[i].getElementsByTagName("button")[j].style.backgroundColor = "rgb(255, 255, 255)";
+              this.caja[i].getElementsByTagName("button")[j].style.color = "rgb(0, 0, 0)";
+            }
+          }
+        }
+
+        this.isDarkMode = false;
       }
     }
   }

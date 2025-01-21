@@ -1,5 +1,12 @@
 .button {
-  color: var(--white-bg);
+  color: rgb(0, 0, 0);
+  transition: left 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  background: transparent;
+  border: none;
+}
+
+.dark {
+  color: rgb(255, 255, 255);
   transition: left 0.15s ease-in-out, background-color 0.15s ease-in-out;
   background: transparent;
   border: none;
