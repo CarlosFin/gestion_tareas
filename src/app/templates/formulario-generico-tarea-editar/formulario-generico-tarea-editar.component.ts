@@ -2,20 +2,18 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TareasService } from 'src/app/services/tareas.service';
 
-
 @Component({
-  selector: 'app-formulario-generico-tarea',
-  templateUrl: './formulario-generico-tarea.component.html',
-  styleUrls: ['./formulario-generico-tarea.component.css'],
+  selector: 'app-formulario-generico-tarea-editar',
+  templateUrl: './formulario-generico-tarea-editar.component.html',
+  styleUrls: ['./formulario-generico-tarea-editar.component.css'],
 })
-
-export class FormularioGenericoTareaComponent {
+export class FormularioGenericoTareaEditarComponent {
   @Input() tareaR: boolean = false;
   @Input() descripcionR: boolean = false;
   @Input() emailR: boolean = false;
   @Input() usuarioR: boolean = false;
   @Input() departamentoR: boolean = false;
-  @Input() visualizacion: string = 'inline-block'
+  @Input() visualizacion: string = 'inline-block';
 
   textoBoton: string = '';
 
@@ -49,7 +47,6 @@ export class FormularioGenericoTareaComponent {
     this.correoTarea = this.tareaCorreo || '';
     this.usuarioTarea = this.tareaUsuario || '';
     this.departamentoTarea = this.tareaDepartamento || '';
-
   }
 
   tareas1: { id: number; nombre: string; descripcion: string }[] = [];
@@ -100,3 +97,4 @@ export class FormularioGenericoTareaComponent {
     this.tareas = this.tareasService.getTareas(); // Actualizamos la lista en la vista
   }
 }
+

@@ -8,7 +8,7 @@
 
   <div class="buttons">
 
-    <button routerLink="/formulario-tarea-ver">
+    <button [routerLink]="['/formulario-tarea-ver', tarea.id]" [queryParams]="{ nombre: tarea.nombre, descripcion: tarea.descripcion, correo: tarea.correo, usuario: tarea.usuario, departamento: tarea.departamento }">
       <i class="material-icons">visibility</i>
     </button>
 

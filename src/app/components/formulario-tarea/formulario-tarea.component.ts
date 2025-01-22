@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormularioTareaComponent{
   textoBoton: string = '';
 
-  crear: string = 'Crear';
-  cancelar: string = 'Cancelar';
+  cancelar: string = 'Regresar';
 
   tareaRead: boolean = false;
   descripcionRead: boolean = false;

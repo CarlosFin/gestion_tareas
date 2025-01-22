@@ -34,4 +34,5 @@ export class ListaTareasUsuarioComponent {
     const ahora = new Date();
     this.horaF = ahora.toLocaleTimeString(); // Formato de la hora en cadena
   }
+
 }

@@ -34,6 +34,10 @@ import { ModoClaroOscuroComponent } from './modo-claro-oscuro/modo-claro-oscuro.
 import { BotonRadioPendientesComponent } from './components/boton-radio-pendientes/boton-radio-pendientes.component';
 import { BotonRadioTerminadasComponent } from './components/boton-radio-terminadas/boton-radio-terminadas.component';
 import { BotonRadioTodasComponent } from './components/boton-radio-todas/boton-radio-todas.component';
+import { FormularioGenericoTareaEditarComponent } from './templates/formulario-generico-tarea-editar/formulario-generico-tarea-editar.component';
+import { FormularioGenericoTareaCrearComponent } from './templates/formulario-generico-tarea-crear/formulario-generico-tarea-crear.component';
+import { FormularioEditarComponent } from './templates/formulario-editar/formulario-editar.component';
+import { FormularioCrearComponent } from './templates/formulario-crear/formulario-crear.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +68,11 @@ import { BotonRadioTodasComponent } from './components/boton-radio-todas/boton-r
     ModoClaroOscuroComponent,
     BotonRadioPendientesComponent,
     BotonRadioTerminadasComponent,
-    BotonRadioTodasComponent
+    BotonRadioTodasComponent,
+    FormularioGenericoTareaEditarComponent,
+    FormularioGenericoTareaCrearComponent,
+    FormularioEditarComponent,
+    FormularioCrearComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
