@@ -1,25 +1,30 @@
+<p *ngIf="errorMensaje">{{errorMensaje}}</p>
+
 <div>
   <label for="tarea" class="form-label">Nombre tarea</label>
-  <input type="text" class="form-control" id="tarea" aria-describedby="tarea" [readonly]="tareaR">
+  <input type="text" class="form-control" id="tarea" aria-describedby="tarea" [readonly]="tareaR" placeholder={{tareaNombre}} [(ngModel)]="nombreTarea"/>
 </div>
 
 <div>
   <span>Descripción</span>
-  <textarea class="form-control" aria-label="descripcion" [readonly]="descripcionR"></textarea>
+  <textarea class="form-control" aria-label="descripcion" [readonly]="descripcionR" placeholder={{tareaDescripcion}} [(ngModel)]="descripcionTarea" ></textarea>
 </div>
 
 <div>
   <label for="email" class="form-label">Correo electronico</label>
-  <input type="email" class="form-control" id="email" [readOnly]="emailR"/>
+  <input type="email" class="form-control" id="email" [readOnly]="emailR" placeholder={{tareaCorreo}} [(ngModel)]="correoTarea"/>
 </div>
 
 <div>
   <label for="nombre_usuario" class="form-label">Nombre usuario</label>
-  <input type="nombre_usuario" class="form-control" id="nombre_usuario" [readonly]="usuarioR">
+  <input type="nombre_usuario" class="form-control" id="nombre_usuario" [readonly]="usuarioR" placeholder={{tareaUsuario}} [(ngModel)]="usuarioTarea"/>
 </div>
 
 <div>
   <label for="departamento" class="form-label">Departamento</label>
-  <input type="text" class="form-control" id="departamento" [readonly]="departamentoR">
+  <input type="text" class="form-control" id="departamento" [readonly]="departamentoR" placeholder={{tareaDepartamento}} [(ngModel)]="departamentoTarea"/>
 </div>
+
+<app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()" routerLink="/lista-tareas-usuario" [style.display]="visualizacion"></app-boton-info-aceptar>
+<app-boton-info-aceptar [textoBoton]="actualizar" (click)="actualizarTarea(tarea.id)" routerLink="/lista-tareas-usuario"></app-boton-info-aceptar>
 

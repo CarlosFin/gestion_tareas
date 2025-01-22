@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TareasService } from 'src/app/services/tareas.service';
 
 @Component({
   selector: 'app-lista-tareas-usuario',

@@ -13,6 +13,7 @@ import { FormularioUsuarioComponent } from './components/formulario-usuario/form
 import { FormularioUsuarioVerComponent } from './components/formulario-usuario-ver/formulario-usuario-ver.component';
 import { FormularioUsuarioEditarComponent } from './components/formulario-usuario-editar/formulario-usuario-editar.component';
 
+import { LoginComponent } from './templates/login/login.component';
 
 const routes: Routes = [
   // { path: '', component: ListaTareaAdminComponent },
@@ -22,14 +23,16 @@ const routes: Routes = [
   { path: 'lista-tarea-admin', component: ListaTareaAdminComponent },
   { path: 'formulario-usuario', component: FormularioUsuarioComponent },
   { path: 'formulario-usuario-ver/:id', component: FormularioUsuarioVerComponent },
-  { path: 'formulario-usuario-editar', component: FormularioUsuarioEditarComponent },
+  { path: 'formulario-usuario-editar/:id', component: FormularioUsuarioEditarComponent },
 
   { path: '', component: ListaTareasUsuarioComponent },
   { path: 'lista-tareas-usuario', component: ListaTareasUsuarioComponent },
   { path: 'formulario-perfil-usuario', component: FormularioPerfilUsuarioComponent },
   { path: 'formulario-tarea-ver/:id', component: FormularioTareaVerComponent },
-  { path: 'formulario-tarea-editar', component: FormularioTareaEditarComponent },
+  { path: 'formulario-tarea-editar/:id', component: FormularioTareaEditarComponent },
   { path: 'formulario-tarea', component: FormularioTareaComponent },
+
+  // { path: '', component: LoginComponent },
 ];
 
 @NgModule({

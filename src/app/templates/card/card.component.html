@@ -12,14 +12,18 @@
       <i class="material-icons">visibility</i>
     </button>
 
-    <button routerLink="/formulario-tarea-editar">
+    <button [routerLink]="['/formulario-tarea-editar', tarea.id]" [queryParams]="{ nombre: tarea.nombre, descripcion: tarea.descripcion, correo: tarea.correo, usuario: tarea.usuario, departamento: tarea.departamento }">
       <i class="material-icons">mode_edit</i>
     </button>
 
-    <button [style.display]="visualizacion">
+    <button [style.display]="visualizacion" (click)="eliminarTarea(tarea.id)">
       <i class="material-icons">delete</i>
     </button>
 
   </div>
 
 </div>
+
+
+<!--  Preguntar como poner la foto al crear el usuario aparecca al verlo -->
+<!-- Estilo de los botones -->
