@@ -6,7 +6,7 @@
   --succes-bg: #208454;
   --danger-bg: #e03444;
   --dark-bg: #28242c;
-  --white-bg: rgb(255,255, 255);
+  --white-bg: rgb(255, 255, 255);
 
   /* Color header */
   --color-header-claro: rgb(240, 187, 187);
@@ -49,6 +49,15 @@
   --claro-dark: var(--dark-bg);
 }
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
-body { margin: 0; }
+body {
+  margin: 0;
+}
+
+form {
+  border-color: rgb(0, 0, 0);
+}

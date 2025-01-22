@@ -6,10 +6,12 @@ describe('ModoClaroOscuroComponent', () => {
   let component: ModoClaroOscuroComponent;
   let fixture: ComponentFixture<ModoClaroOscuroComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ModoClaroOscuroComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [ModoClaroOscuroComponent]
+    })
+    .compileComponents();
+
     fixture = TestBed.createComponent(ModoClaroOscuroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -7,6 +7,7 @@ import { TareasService } from 'src/app/services/tareas.service';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
+
   @Input() visualizacion: string = 'inline-block';
 
   tareas: {

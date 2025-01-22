@@ -1,26 +1,25 @@
-.login{
+.login {
   background-color: var(--card-color-claro);
   display: flex;
   flex-direction: column;
-
 }
 
-.logo{
+.logo {
   width: 4rem;
   height: 4rem;
 }
 
-p{
+p {
   font-family: var(--letra-inter);
   font-size: var(--letra-tamano-inter);
 }
 
-label{
+label {
   font-family: var(--letra-raj);
   font-size: var(--letra-tamano-raj);
 }
 
-form{
+form {
   width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
@@ -28,6 +27,6 @@ form{
   align-items: center !important;
 }
 
-.boton{
+.boton {
   margin-top: 10px;
 }

@@ -7,7 +7,7 @@ import { TareasService } from 'src/app/services/tareas.service';
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
 })
-export class FormularioComponent implements OnInit {
+export class FormularioComponent {
   @Input() nombreR: boolean = false;
   @Input() departamentoR: boolean = false;
   @Input() emailR: boolean = false;

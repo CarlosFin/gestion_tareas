@@ -13,7 +13,7 @@ export class FormularioGenericoTareaComponent {
   @Input() emailR: boolean = false;
   @Input() usuarioR: boolean = false;
   @Input() departamentoR: boolean = false;
-  @Input() visualizacion: string = 'inline-block';
+  @Input() visualizacion: string = 'inline-block'
 
   textoBoton: string = '';
 

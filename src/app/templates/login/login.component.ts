@@ -6,8 +6,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  textoBoton: string = '';
 
+  textoBoton: string = '';
   iniciar_sesion: string = 'Iniciar sesion';
 
   @Output() datosEnviados = new EventEmitter<{
@@ -19,7 +19,9 @@ export class LoginComponent {
   password: string = '';
 
   enviarDatos() {
+
     if (this.nombre && this.password) {
+
       const datosUsuario = {
         nombre: this.nombre,
         password: this.password,

@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   /*border: 1px solid lightskyblue;*/
-  padding: 30px 18% 30px 5%;
+  padding: 30px 55% 30px 5%;
   font-size: 20px;
   width: 75%;
 }
@@ -32,7 +32,7 @@
 
 .buttons button {
   margin: 0 10px;
-  font-size: 36px
+  font-size: 36px;
 }
 
 .buttons button span {

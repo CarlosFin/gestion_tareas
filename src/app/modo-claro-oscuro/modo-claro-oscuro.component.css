@@ -1,18 +1,25 @@
 .button {
-  position: absolute;
-  margin-top: 3px;
-  margin-left: 3px;
-  left: 25px;
-  background-color: var(--white-bg);
-  color: var(--dark-bg);
+  color: rgb(0, 0, 0);
   transition: left 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  background: transparent;
+  border: none;
+}
+
+.dark {
+  color: rgb(255, 255, 255);
+  transition: left 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  background: transparent;
+  border: none;
+}
+
+span {
+  font-size: 30px;
 }
 
 .buttonSelected {
   position: absolute;
   margin-top: 3px;
   margin-left: 3px;
-  left: 25px;
   background-color: var(--dark-bg);
   color: var(--white-bg);
   transition: left 0.15s ease-in-out, background-color 0.15s ease-in-out;
