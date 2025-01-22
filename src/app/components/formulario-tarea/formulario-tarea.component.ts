@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-formulario-tarea',
   templateUrl: './formulario-tarea.component.html',
   styleUrls: ['./formulario-tarea.component.css'],
 })
-export class FormularioTareaComponent {
+export class FormularioTareaComponent{
   textoBoton: string = '';
 
-  crear: string = 'Crear';
   cancelar: string = 'Regresar';
 
   tareaRead: boolean = false;
@@ -16,4 +15,6 @@ export class FormularioTareaComponent {
   emailRead: boolean = false;
   usuarioRead: boolean = false;
   departamentoRead: boolean = false;
+
+
 }

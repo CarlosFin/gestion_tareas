@@ -1,39 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TareasService } from 'src/app/services/tareas.service';
 
 @Component({
   selector: 'app-card-user-admin',
   templateUrl: './card-user-admin.component.html',
   styleUrls: ['./card-user-admin.component.css'],
 })
-export class CardUserAdminComponent {
-  usuarios = [
-    {
-      id: 1,
-      nombre: 'Juan',
-      departamento: 'Dirección General',
-      correo: 'juan@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
-    {
-      id: 2,
-      nombre: 'Clara',
-      departamento: 'Administración',
-      correo: 'clara@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
-    {
-      id: 3,
-      nombre: 'Marcelina',
-      departamento: 'Finanzas',
-      correo: 'marcelina@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
-    {
-      id: 4,
-      nombre: 'Antonio',
-      departamento: 'Recursos Humanos',
-      correo: 'antonio@gmail.com',
-      foto: '../../assets/img/user.png'
-    },
-  ];
+export class CardUserAdminComponent implements OnInit {
+  usuarios: {
+    id: number;
+    nombre: string;
+    departamento: string;
+    correo: string;
+    foto: string;
+  }[] = [];
+
+  constructor(private tareasService: TareasService) {}
+
+  ngOnInit() {
+    // Cargar la lista inicial de tareas
+    this.usuarios = this.tareasService.getUsuarios();
+  }
+
+  eliminarUsuario(id: number) {
+    this.tareasService.deleteUsuario(id); // Eliminamos la tarea del servicio
+    this.usuarios = this.tareasService.getUsuarios(); // Actualizamos la lista en la vista
+  }
+
 }
