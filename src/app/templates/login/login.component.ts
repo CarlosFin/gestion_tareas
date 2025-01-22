@@ -5,13 +5,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-
 export class LoginComponent {
   textoBoton: string = '';
 
   iniciar_sesion: string = 'Iniciar sesion';
 
-  @Output() datosEnviados = new EventEmitter<{nombre: string; password: string}>;
+  @Output() datosEnviados = new EventEmitter<{
+    nombre: string;
+    password: string;
+  }>();
 
   nombre: string = '';
   password: string = '';

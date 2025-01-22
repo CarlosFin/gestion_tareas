@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class FormularioUsuarioComponent {
   textoBoton: string = '';
 
-  crear: string = 'Crear';
   cancelar: string = 'Regresar';
 
   nombreRead: boolean = false;
@@ -17,6 +16,6 @@ export class FormularioUsuarioComponent {
   contraRead: boolean = false;
   ccontraRead: boolean = false;
 
-  imagenDisplay: string = 'none';
+  imagenDisplay: string = 'block';
   fotoDisplay: string = 'block';
 }

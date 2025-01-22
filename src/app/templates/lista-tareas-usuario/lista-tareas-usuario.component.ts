@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TareasService } from 'src/app/services/tareas.service';
 
 @Component({
   selector: 'app-lista-tareas-usuario',
@@ -32,6 +33,5 @@ export class ListaTareasUsuarioComponent {
     const ahora = new Date();
     this.horaF = ahora.toLocaleTimeString(); // Formato de la hora en cadena
   }
-
 
 }
