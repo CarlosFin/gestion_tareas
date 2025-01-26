@@ -23,6 +23,7 @@ export class FormularioEditarComponent {
   textoBoton: string = '';
 
   editar: string = 'Actualizar';
+  cancelar: string = 'Cancelar';
 
   usuarioId: number = 0;
   usuarioNombre: string | null = null;
@@ -59,6 +60,17 @@ export class FormularioEditarComponent {
   ccontraUsuario: string = '';
   fotoUsuario: string = '';
   errorMensaje: string = '';
+
+  onFotoUsuarioChange(event: any) {
+    const file = event.target.files[0]; // Obtener el primer archivo seleccionado
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.fotoUsuario = reader.result as string; // Convertir la imagen a una URL temporal
+      };
+      reader.readAsDataURL(file); // Leer la imagen como base64
+    }
+  }
 
   agregarTarea() {
     if (this.nombreUsuario.trim() && this.departamentoUsuario.trim()) {

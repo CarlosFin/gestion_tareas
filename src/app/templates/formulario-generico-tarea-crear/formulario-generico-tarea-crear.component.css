@@ -9,6 +9,14 @@ input {
   font-size: var(--letra-tamano-raj);
 }
 
+.boton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
 @media (max-width: 576px) {
   input {
     width: 100%;

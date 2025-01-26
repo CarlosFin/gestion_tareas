@@ -19,6 +19,7 @@ export class FormularioGenericoTareaEditarComponent {
 
   crear: string = 'Crear';
   actualizar: string = 'Actualizar';
+  cancelar: string = 'Cancelar';
 
   tareaId: number = 0;
   tareaNombre: string | null = null;

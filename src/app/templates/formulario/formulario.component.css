@@ -11,4 +11,9 @@ input {
 img {
   width: 200px;
   margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.boton{
+  text-align: center;
 }

@@ -23,6 +23,7 @@ export class FormularioComponent {
   textoBoton: string = '';
 
   editar: string = 'Actualizar';
+  regresar: string = 'Regresar';
 
   usuarioId: number = 0;
   usuarioNombre: string | null = null;

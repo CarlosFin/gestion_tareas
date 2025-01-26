@@ -7,6 +7,7 @@ import { TareasService } from 'src/app/services/tareas.service';
   templateUrl: './formulario-crear.component.html',
   styleUrls: ['./formulario-crear.component.css'],
 })
+
 export class FormularioCrearComponent {
   @Input() nombreR: boolean = false;
   @Input() departamentoR: boolean = false;
@@ -23,6 +24,7 @@ export class FormularioCrearComponent {
   textoBoton: string = '';
 
   editar: string = 'Actualizar';
+  cancelar: string = 'Cancelar';
 
   usuarioId: number = 0;
   usuarioNombre: string | null = null;
@@ -59,6 +61,18 @@ export class FormularioCrearComponent {
   ccontraUsuario: string = '';
   fotoUsuario: string = '';
   errorMensaje: string = '';
+
+  // Método para manejar la carga de la foto
+  onFotoUsuarioChange(event: any) {
+    const file = event.target.files[0]; // Obtener el primer archivo seleccionado
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.fotoUsuario = reader.result as string; // Convertir la imagen a base64 o URL temporal
+      };
+      reader.readAsDataURL(file); // Leer la imagen como base64
+    }
+  }
 
   agregarTarea() {
     if (this.nombreUsuario.trim() && this.departamentoUsuario.trim()) {

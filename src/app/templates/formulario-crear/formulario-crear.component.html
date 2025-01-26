@@ -21,7 +21,14 @@
   <input type="text" class="form-control" id="rep_password" [readonly]="ccontraR" [style.display]="ccontraRD" [(ngModel)]="ccontraUsuario"/>
 </div>
 <div class="mt-3 mb-3">
-  <input type="file" class="form-control" [style.display]="imagenD" [(ngModel)]="fotoUsuario"/>
+  <input type="file" class="form-control" [style.display]="imagenD" (change)="onFotoUsuarioChange($event)"/>
 </div>
 
-<app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()" routerLink="/lista-usuario-admin"></app-boton-info-aceptar>
+<img *ngIf="fotoUsuario" [src]="fotoUsuario" alt="Foto del usuario" [style.display]="fotoD">
+
+<div class="boton">
+  <app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()" routerLink="/lista-usuario-admin"></app-boton-info-aceptar>
+</div>
+<div class="boton">
+  <app-boton-dark [textoBoton]="cancelar" routerLink="/lista-usuario-admin"></app-boton-dark>
+</div>
