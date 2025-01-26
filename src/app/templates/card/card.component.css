@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: 'var(--card-user-claro)';
 }
 
 .TitleDescription {
@@ -26,7 +27,7 @@
   display: flex;
   flex-direction: row;
   /*border: 1px solid lightgreen;*/
-  padding: 10px 40px;
+  padding: 40px 20px;
   display: inline-block;
   width: 25%;
 }
