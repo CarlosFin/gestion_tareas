@@ -26,5 +26,10 @@
 </div>
 
 <!-- <app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()" routerLink="/lista-tareas-usuario" [style.display]="visualizacion"></app-boton-info-aceptar> -->
-<app-boton-info-aceptar [textoBoton]="actualizar" (click)="actualizarTarea(tarea.id)" routerLink="/lista-tareas-usuario"></app-boton-info-aceptar>
+<div class="boton">
+  <app-boton-info-aceptar [textoBoton]="actualizar" (click)="actualizarTarea(tarea.id)" routerLink="/lista-tareas-usuario"></app-boton-info-aceptar>
+</div>
+<div class="boton">
+  <app-boton-dark [textoBoton]="cancelar"></app-boton-dark>
+</div>
 

@@ -1,0 +1,23 @@
+.color-header {
+  background-color: var(--color-header-claro);
+}
+
+li a {
+  font-family: var(--letra-inter);
+  font-size: var(--letra-tamano-inter);
+  color: var(--dark-bg);
+}
+
+.img_logo {
+  width: 3rem;
+}
+
+button {
+  margin-right: 20px;
+  background: transparent;
+  border: none;
+}
+
+span {
+  font-size: 30px;
+}

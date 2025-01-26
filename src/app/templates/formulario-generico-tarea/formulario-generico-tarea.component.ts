@@ -8,17 +8,17 @@ import { TareasService } from 'src/app/services/tareas.service';
   templateUrl: './formulario-generico-tarea.component.html',
   styleUrls: ['./formulario-generico-tarea.component.css'],
 })
-
 export class FormularioGenericoTareaComponent {
   @Input() tareaR: boolean = false;
   @Input() descripcionR: boolean = false;
   @Input() emailR: boolean = false;
   @Input() usuarioR: boolean = false;
   @Input() departamentoR: boolean = false;
-  @Input() visualizacion: string = 'inline-block'
+  @Input() visualizacion: string = 'inline-block';
 
   textoBoton: string = '';
 
+  regresar: string = 'Regresar';
   crear: string = 'Crear';
   actualizar: string = 'Actualizar';
 
@@ -49,7 +49,6 @@ export class FormularioGenericoTareaComponent {
     this.correoTarea = this.tareaCorreo || '';
     this.usuarioTarea = this.tareaUsuario || '';
     this.departamentoTarea = this.tareaDepartamento || '';
-
   }
 
   tareas1: { id: number; nombre: string; descripcion: string }[] = [];

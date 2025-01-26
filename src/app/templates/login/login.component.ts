@@ -1,4 +1,8 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+// import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,31 +10,58 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-
   textoBoton: string = '';
   iniciar_sesion: string = 'Iniciar sesion';
 
-  @Output() datosEnviados = new EventEmitter<{
-    nombre: string;
-    password: string;
-  }>();
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) { }
 
-  nombre: string = '';
-  password: string = '';
+  usuario = this.fb.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(4)]],
+  });
 
-  enviarDatos() {
+  ngOnInit() {}
 
-    if (this.nombre && this.password) {
-
-      const datosUsuario = {
-        nombre: this.nombre,
-        password: this.password,
-      };
-
-      this.datosEnviados.emit(datosUsuario);
-
-      this.nombre = '';
-      this.password = '';
-    }
+  login() {
+    const email = this.usuario.get('email')?.value ?? '';
+    const password = this.usuario.get('password')?.value ?? '';
+    this.auth
+      .loginUser(email, password)
+      .then((result) => {
+        this.router.navigate(['/lista-tareas-usuario']);
+      })
+      // .catch((err) => {
+      //   this.alertCtrl
+      //     .create({
+      //       header: 'Error',
+      //       subHeader: err.message,
+      //       buttons: ['Aceptar'],
+      //     })
+      //     .then((alert) => {
+      //       alert.present();
+      //     });
+      // });
   }
+
+  // @Output() datosEnviados = new EventEmitter<{
+  //   nombre: string;
+  //   password: string;
+  // }>();
+
+  // nombre: string = '';
+  // password: string = '';
+
+  // enviarDatos() {
+  //   if (this.nombre && this.password) {
+  //     const datosUsuario = {
+  //       nombre: this.nombre,
+  //       password: this.password,
+  //     };
+
+  //     this.datosEnviados.emit(datosUsuario);
+
+  //     this.nombre = '';
+  //     this.password = '';
+  //   }
+  // }
 }

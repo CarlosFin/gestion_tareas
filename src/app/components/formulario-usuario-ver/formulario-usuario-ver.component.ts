@@ -16,7 +16,7 @@ export class FormularioUsuarioVerComponent {
   contraRead: boolean = true;
   ccontraRead: boolean = true;
 
-  imagenDisplay: string = 'bolck';
+  imagenDisplay: string = 'none';
   fotoDisplay: string = 'block';
 
   contraDisplay: string = 'none';

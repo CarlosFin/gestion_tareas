@@ -25,14 +25,14 @@ const routes: Routes = [
   { path: 'formulario-usuario-ver/:id', component: FormularioUsuarioVerComponent },
   { path: 'formulario-usuario-editar/:id', component: FormularioUsuarioEditarComponent },
 
-  { path: '', component: ListaTareasUsuarioComponent },
+  // { path: '', component: ListaTareasUsuarioComponent },
   { path: 'lista-tareas-usuario', component: ListaTareasUsuarioComponent },
   { path: 'formulario-perfil-usuario', component: FormularioPerfilUsuarioComponent },
   { path: 'formulario-tarea-ver/:id', component: FormularioTareaVerComponent },
   { path: 'formulario-tarea-editar/:id', component: FormularioTareaEditarComponent },
   { path: 'formulario-tarea', component: FormularioTareaComponent },
 
-  // { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent },
 ];
 
 @NgModule({

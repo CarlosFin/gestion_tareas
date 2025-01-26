@@ -12,3 +12,11 @@ img {
   width: 200px;
   margin-bottom: 20px;
 }
+
+.boton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}

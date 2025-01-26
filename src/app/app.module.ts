@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -38,6 +38,21 @@ import { FormularioGenericoTareaEditarComponent } from './templates/formulario-g
 import { FormularioGenericoTareaCrearComponent } from './templates/formulario-generico-tarea-crear/formulario-generico-tarea-crear.component';
 import { FormularioEditarComponent } from './templates/formulario-editar/formulario-editar.component';
 import { FormularioCrearComponent } from './templates/formulario-crear/formulario-crear.component';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { HeaderAdminComponent } from './templates/header-admin/header-admin.component';
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyCnbVXEFMsgF01u0lNG7KYC41rQoUrZFOo',
+  authDomain: 'fir-f5611.firebaseapp.com',
+  projectId: 'fir-f5611',
+  storageBucket: 'fir-f5611.firebasestorage.app',
+  messagingSenderId: '844197985134',
+  appId: '1:844197985134:web:19f0e60712e6a56e749f7f',
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,9 +87,18 @@ import { FormularioCrearComponent } from './templates/formulario-crear/formulari
     FormularioGenericoTareaEditarComponent,
     FormularioGenericoTareaCrearComponent,
     FormularioEditarComponent,
-    FormularioCrearComponent
+    FormularioCrearComponent,
+    HeaderAdminComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
