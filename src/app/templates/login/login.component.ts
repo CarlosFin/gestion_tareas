@@ -12,8 +12,13 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   textoBoton: string = '';
   iniciar_sesion: string = 'Iniciar sesion';
+  errorMessage: string = '';
 
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) { }
+  constructor(
+    private fb: FormBuilder,
+    private auth: AuthService,
+    private router: Router
+  ) {}
 
   usuario = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
@@ -23,45 +28,20 @@ export class LoginComponent {
   ngOnInit() {}
 
   login() {
+    this.errorMessage = '';
     const email = this.usuario.get('email')?.value ?? '';
     const password = this.usuario.get('password')?.value ?? '';
     this.auth
       .loginUser(email, password)
       .then((result) => {
-        this.router.navigate(['/lista-tareas-usuario']);
+        if (email === 'carlos@gmail.com') {
+          this.router.navigate(['/lista-tarea-admin']);
+        } else {
+          this.router.navigate(['/lista-tareas-usuario']);
+        }
       })
-      // .catch((err) => {
-      //   this.alertCtrl
-      //     .create({
-      //       header: 'Error',
-      //       subHeader: err.message,
-      //       buttons: ['Aceptar'],
-      //     })
-      //     .then((alert) => {
-      //       alert.present();
-      //     });
-      // });
+      .catch((err) => {
+        this.errorMessage = "El usuario o la contraseña son incorrectos";
+      });
   }
-
-  // @Output() datosEnviados = new EventEmitter<{
-  //   nombre: string;
-  //   password: string;
-  // }>();
-
-  // nombre: string = '';
-  // password: string = '';
-
-  // enviarDatos() {
-  //   if (this.nombre && this.password) {
-  //     const datosUsuario = {
-  //       nombre: this.nombre,
-  //       password: this.password,
-  //     };
-
-  //     this.datosEnviados.emit(datosUsuario);
-
-  //     this.nombre = '';
-  //     this.password = '';
-  //   }
-  // }
 }
