@@ -40,3 +40,15 @@
 .buttons button span {
   margin: 5px;
 }
+
+.color_blue{
+  color: blue;
+}
+
+.color_yellow{
+  color: rgb(149, 149, 49);
+}
+
+.color_red{
+  color: red;
+}
