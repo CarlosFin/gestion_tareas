@@ -1,4 +1,4 @@
-<p *ngIf="errorMensaje">{{errorMensaje}}</p>
+<p class="alert" *ngIf="errorMensaje">{{errorMensaje}}</p>
 
 <img *ngIf="fotoUsuario" [src]="fotoUsuario" alt="Foto del usuario" [style.display]="fotoD"><div>
   <label for="nombre" class="form-label">Nombre completo</label>
@@ -24,7 +24,7 @@
 </div>
 
 <div class="boton">
-  <app-boton-info-aceptar [textoBoton]="editar" (click)="actualizarUsuario(usuario.id)" routerLink="/lista-usuario-admin"></app-boton-info-aceptar>
+  <app-boton-info-aceptar [textoBoton]="editar" (click)="actualizarUsuario(usuario.id)"></app-boton-info-aceptar>
 </div>
 <div class="boton">
   <app-boton-dark [textoBoton]="cancelar" routerLink="/lista-usuario-admin"></app-boton-dark>

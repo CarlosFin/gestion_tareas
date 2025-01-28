@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TareasService } from 'src/app/services/tareas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-tarea-crear-admin',
@@ -30,7 +31,8 @@ export class FormularioTareaCrearAdminComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private tareasService: TareasService
+    private tareasService: TareasService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -59,7 +61,7 @@ export class FormularioTareaCrearAdminComponent {
   errorMensaje: string = '';
 
   agregarTarea() {
-    if (this.nombreTarea.trim() && this.descripcionTarea.trim()) {
+    if (this.nombreTarea.trim() && this.descripcionTarea.trim() && this.correoTarea.trim() && this.usuarioTarea.trim() && this.departamentoTarea.trim()) {
       const nueva = {
         id: Date.now(), // Generamos un ID único basado en la fecha actual
         nombre: this.nombreTarea,
@@ -71,6 +73,7 @@ export class FormularioTareaCrearAdminComponent {
       this.tareasService.tareas.push(nueva); // Añadimos la tarea al servicio
       this.tareas1 = this.tareasService.getTareas1(); // Actualizamos la lista en la vista
       this.nombreTarea = ''; // Limpiamos el campo de entrada
+      this.router.navigate(['/lista-tarea-admin']);
     } else {
       this.errorMensaje = 'No puedes añadir una tarea vacía';
     }

@@ -1,4 +1,4 @@
-<p *ngIf="errorMensaje">{{errorMensaje}}</p>
+<p class="alert" *ngIf="errorMensaje">{{errorMensaje}}</p>
 
 <img src={{usuarioFoto}} alt="" [style.display]="fotoD">
 <div>
@@ -27,7 +27,7 @@
 <img *ngIf="fotoUsuario" [src]="fotoUsuario" alt="Foto del usuario" [style.display]="fotoD">
 
 <div class="boton">
-  <app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()" routerLink="/lista-usuario-admin"></app-boton-info-aceptar>
+  <app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()"></app-boton-info-aceptar>
 </div>
 <div class="boton">
   <app-boton-dark [textoBoton]="cancelar" routerLink="/lista-usuario-admin"></app-boton-dark>
