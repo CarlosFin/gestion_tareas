@@ -39,7 +39,6 @@ export class HeaderComponent {
 
   removeDarkMode() {
 
-
     document.getElementsByTagName('span')[1].innerHTML = 'light_mode';
     document.getElementsByTagName('span')[1].classList.remove('dark');
 
@@ -56,6 +55,11 @@ export class HeaderComponent {
 
     Array.from(document.getElementsByTagName('a')).forEach((link) => {
       link.style.color = 'var(--dark-bg)';
+    });
+
+    Array.from(document.getElementsByTagName('textarea')).forEach(textArea => {
+      textArea.style.backgroundColor = "rgb(255, 255, 255)";;
+      textArea.style.color = "rgb(0, 0, 0)";
     });
 
     Array.from(document.getElementsByTagName('div')).forEach((box) => {
