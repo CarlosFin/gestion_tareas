@@ -13,6 +13,7 @@ export class ModoClaroOscuroComponent {
   enlace: HTMLCollectionOf<HTMLAnchorElement> = document.getElementsByTagName('a');
   caja: HTMLCollectionOf<HTMLDivElement> = document.getElementsByTagName('div');
   formulario: HTMLCollectionOf<HTMLFormElement> = document.getElementsByTagName("form");
+  areaTexto: HTMLCollectionOf<HTMLTextAreaElement> = document.getElementsByTagName("textarea");
 
   isDarkMode: Boolean = document.body.classList.contains("darkMode");
   indice: Number = 0;
@@ -38,6 +39,11 @@ export class ModoClaroOscuroComponent {
 
       Array.from(this.enlace).forEach(link => {
         link.style.color = 'var(--white-bg)';
+      });
+
+      Array.from(this.areaTexto).forEach(textArea => {
+        textArea.style.backgroundColor = "rgb(0, 0, 0)";;
+        textArea.style.color = "rgb(255, 255, 255)";
       });
 
       Array.from(this.caja).forEach(box => {
@@ -74,6 +80,11 @@ export class ModoClaroOscuroComponent {
 
       Array.from(this.enlace).forEach(link => {
         link.style.color = 'var(--dark-bg)';
+      });
+
+      Array.from(this.areaTexto).forEach(textArea => {
+        textArea.style.backgroundColor = "rgb(255, 255, 255)";;
+        textArea.style.color = "rgb(0, 0, 0)";
       });
 
       Array.from(this.caja).forEach(box => {
