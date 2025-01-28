@@ -15,5 +15,5 @@ export class FormularioTareaEditarAdminComponent {
   descripcionRead: boolean = false;
   emailRead: boolean = false;
   usuarioRead: boolean = false;
-  departamentoRead: boolean = false;
+  departamentoRead: boolean = true;
 }

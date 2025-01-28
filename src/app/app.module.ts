@@ -43,6 +43,14 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HeaderAdminComponent } from './templates/header-admin/header-admin.component';
+import { ErrorMenssageComponent } from './components/error-menssage/error-menssage.component';
+import { CardAdminComponent } from './templates/card-admin/card-admin.component';
+import { FormularioTareaVerAdminComponent } from './components/formulario-tarea-ver-admin/formulario-tarea-ver-admin.component';
+import { FormularioGenericoTareaAdminComponent } from './templates/formulario-generico-tarea-admin/formulario-generico-tarea-admin.component';
+import { FormularioGenericoTareaEditarAdminComponent } from './templates/formulario-generico-tarea-editar-admin/formulario-generico-tarea-editar-admin.component';
+import { BotonInfoAdminComponent } from './components/boton-info-admin/boton-info-admin.component';
+import { FormularioTareaAdminComponent } from './components/formulario-tarea-admin/formulario-tarea-admin.component';
+import { FormularioTareaCrearAdminComponent } from './templates/formulario-tarea-crear-admin/formulario-tarea-crear-admin.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyCnbVXEFMsgF01u0lNG7KYC41rQoUrZFOo',
@@ -89,6 +97,14 @@ export const firebaseConfig = {
     FormularioEditarComponent,
     FormularioCrearComponent,
     HeaderAdminComponent,
+    ErrorMenssageComponent,
+    CardAdminComponent,
+    FormularioTareaVerAdminComponent,
+    FormularioGenericoTareaAdminComponent,
+    FormularioGenericoTareaEditarAdminComponent,
+    BotonInfoAdminComponent,
+    FormularioTareaAdminComponent,
+    FormularioTareaCrearAdminComponent,
   ],
   imports: [
     BrowserModule,
