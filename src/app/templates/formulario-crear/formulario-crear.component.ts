@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TareasService } from 'src/app/services/tareas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-crear',
   templateUrl: './formulario-crear.component.html',
   styleUrls: ['./formulario-crear.component.css'],
 })
-
 export class FormularioCrearComponent {
   @Input() nombreR: boolean = false;
   @Input() departamentoR: boolean = false;
@@ -36,7 +36,8 @@ export class FormularioCrearComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private tareasService: TareasService
+    private tareasService: TareasService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -75,7 +76,12 @@ export class FormularioCrearComponent {
   }
 
   agregarTarea() {
-    if (this.nombreUsuario.trim() && this.departamentoUsuario.trim()) {
+    if (
+      this.nombreUsuario &&
+      this.departamentoUsuario &&
+      this.correoUsuario &&
+      this.fotoUsuario
+    ) {
       const nueva = {
         id: Date.now(), // Generamos un ID único basado en la fecha actual
         nombre: this.nombreUsuario,
@@ -86,8 +92,9 @@ export class FormularioCrearComponent {
       this.tareasService.usuarios.push(nueva); // Añadimos la tarea al servicio
       this.usuarios1 = this.tareasService.getUsuarios1(); // Actualizamos la lista en la vista
       this.nombreUsuario = ''; // Limpiamos el campo de entrada
+      this.router.navigate(['/lista-usuario-admin']);
     } else {
-      this.errorMensaje = 'No puedes añadir una tarea vacía';
+      this.errorMensaje = 'No puedes añadir un usuario vacío';
     }
   }
 

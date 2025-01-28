@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TareasService } from 'src/app/services/tareas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-generico-tarea-crear',
@@ -30,7 +31,8 @@ export class FormularioGenericoTareaCrearComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private tareasService: TareasService
+    private tareasService: TareasService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -71,6 +73,7 @@ export class FormularioGenericoTareaCrearComponent {
       this.tareasService.tareas.push(nueva); // Añadimos la tarea al servicio
       this.tareas1 = this.tareasService.getTareas1(); // Actualizamos la lista en la vista
       this.nombreTarea = ''; // Limpiamos el campo de entrada
+      this.router.navigate(['/lista-tareas-usuario']);
     } else {
       this.errorMensaje = 'No puedes añadir una tarea vacía';
     }

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TareasService } from 'src/app/services/tareas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-generico-tarea-editar',
@@ -30,7 +31,8 @@ export class FormularioGenericoTareaEditarComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private tareasService: TareasService
+    private tareasService: TareasService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -87,15 +89,26 @@ export class FormularioGenericoTareaEditarComponent {
   };
 
   actualizarTarea(id: number) {
-    const nuevaInfo = {
-      nombre: this.nombreTarea,
-      descripcion: this.descripcionTarea,
-      correo: this.correoTarea,
-      usuario: this.usuarioTarea,
-      departamento: this.departamentoTarea,
-    }; // Marcamos la tarea como completada
-    this.tareasService.updateTarea(id, nuevaInfo); // Actualizamos la tarea
-    this.tareas = this.tareasService.getTareas(); // Actualizamos la lista en la vista
+    if (
+      this.nombreTarea.trim() &&
+      this.descripcionTarea.trim() &&
+      this.correoTarea.trim() &&
+      this.usuarioTarea.trim() &&
+      this.departamentoTarea.trim()
+    ) {
+      const nuevaInfo = {
+        nombre: this.nombreTarea,
+        descripcion: this.descripcionTarea,
+        correo: this.correoTarea,
+        usuario: this.usuarioTarea,
+        departamento: this.departamentoTarea,
+      }; // Marcamos la tarea como completada
+      this.tareasService.updateTarea(id, nuevaInfo); // Actualizamos la tarea
+      this.tareas = this.tareasService.getTareas(); // Actualizamos la lista en la vista
+      this.router.navigate(['/lista-tareas-usuario']);
+    } else {
+      this.errorMensaje = 'No puedes actualizar una tarea vacía';
+    }
   }
 }
 

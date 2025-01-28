@@ -1,4 +1,4 @@
-<p *ngIf="errorMensaje">{{errorMensaje}}</p>
+<p class="alert" *ngIf="errorMensaje">{{errorMensaje}}</p>
 
 <div>
   <label for="tarea" class="form-label">Nombre tarea</label>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="boton">
-  <app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()" routerLink="/lista-tareas-usuario" [style.display]="visualizacion"></app-boton-info-aceptar>
+  <app-boton-info-aceptar [textoBoton]="crear" (click)="agregarTarea()" [style.display]="visualizacion"></app-boton-info-aceptar>
 </div>
 <div class="boton">
   <app-boton-dark [textoBoton]="cancelar" routerLink="/lista-tareas-usuario"></app-boton-dark>

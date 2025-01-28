@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TareasService } from 'src/app/services/tareas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-editar',
@@ -35,7 +36,8 @@ export class FormularioEditarComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private tareasService: TareasService
+    private tareasService: TareasService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -85,7 +87,7 @@ export class FormularioEditarComponent {
       this.usuarios1 = this.tareasService.getUsuarios1(); // Actualizamos la lista en la vista
       this.nombreUsuario = ''; // Limpiamos el campo de entrada
     } else {
-      this.errorMensaje = 'No puedes añadir una tarea vacía';
+      this.errorMensaje = 'No puedes añadir un usuario vacía';
     }
   }
 
@@ -99,14 +101,24 @@ export class FormularioEditarComponent {
   };
 
   actualizarUsuario(id: number) {
-    const nuevaInfo = {
-      nombre: this.nombreUsuario,
-      departamento: this.departamentoUsuario,
-      correo: this.correoUsuario,
-      foto: this.fotoUsuario,
-    }; // Marcamos la tarea como completada
-    this.tareasService.updateUsuario(id, nuevaInfo); // Actualizamos la tarea
-    this.usuarios = this.tareasService.getUsuarios(); // Actualizamos la lista en la vista
+    if (
+      this.nombreUsuario.trim() &&
+      this.departamentoUsuario.trim() &&
+      this.correoUsuario.trim() &&
+      this.fotoUsuario.trim()
+    ) {
+      const nuevaInfo = {
+        nombre: this.nombreUsuario,
+        departamento: this.departamentoUsuario,
+        correo: this.correoUsuario,
+        foto: this.fotoUsuario,
+      }; // Marcamos la tarea como completada
+      this.tareasService.updateUsuario(id, nuevaInfo); // Actualizamos la tarea
+      this.usuarios = this.tareasService.getUsuarios(); // Actualizamos la lista en la vista
+      this.router.navigate(['/lista-usuario-admin']);
+    } else {
+      this.errorMensaje = 'No puedes actualizar un usuario vacio';
+    }
   }
 }
 
