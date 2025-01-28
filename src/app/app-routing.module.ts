@@ -8,6 +8,7 @@ import { FormularioTareaEditarComponent } from './components/formulario-tarea-ed
 import { FormularioTareaComponent } from './components/formulario-tarea/formulario-tarea.component';
 import { FormularioTareaEditarAdminComponent } from './components/formulario-tarea-editar-admin/formulario-tarea-editar-admin.component';
 import { FormularioTareaAdminComponent } from './components/formulario-tarea-admin/formulario-tarea-admin.component';
+import { FormularioTareaVerAdminComponent } from './components/formulario-tarea-ver-admin/formulario-tarea-ver-admin.component';
 
 import { ListaTareaAdminComponent } from './templates/lista-tarea-admin/lista-tarea-admin.component';
 import { ListaUsuariosAdminComponent } from './templates/lista-usuarios-admin/lista-usuarios-admin.component';
@@ -31,7 +32,7 @@ const routes: Routes = [
   { path: 'lista-tareas-usuario', component: ListaTareasUsuarioComponent },
   { path: 'formulario-perfil-usuario', component: FormularioPerfilUsuarioComponent },
   { path: 'formulario-tarea-ver/:id', component: FormularioTareaVerComponent },
-  { path: 'formulario-tarea-ver-admin/:id', component: FormularioTareaVerComponent },
+  { path: 'formulario-tarea-ver-admin/:id', component: FormularioTareaVerAdminComponent },
   { path: 'formulario-tarea-editar/:id', component: FormularioTareaEditarComponent },
   { path: 'formulario-tarea-editar-admin/:id', component: FormularioTareaEditarAdminComponent },
   { path: 'formulario-tarea', component: FormularioTareaComponent },

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormularioTareaVerAdminComponent {
   textoBoton: string = '';
 
-  regresar: string = 'Regresar';
+  cancelar: string = 'Regresar';
 
   tareaRead: boolean = true;
   descripcionRead: boolean = true;
@@ -16,7 +16,6 @@ export class FormularioTareaVerAdminComponent {
   usuarioRead: boolean = true;
   departamentoRead: boolean = true;
 
-  redireccion: string = '';
 
   constructor() {}
 
