@@ -36,4 +36,44 @@ export class HeaderComponent {
       foto: '../../assets/img/user.png',
     },
   ];
+
+  removeDarkMode() {
+
+
+    document.getElementsByTagName('span')[1].innerHTML = 'light_mode';
+    document.getElementsByTagName('span')[1].classList.remove('dark');
+
+    document.body.classList.remove('darkMode');
+    document.body.style.backgroundColor = 'var(--white-bg)';
+
+    Array.from(document.getElementsByTagName('nav')).forEach((nav) => {
+      nav.style.backgroundColor = 'var(--color-header-claro)';
+    });
+
+    Array.from(document.getElementsByTagName('h1')).forEach((title) => {
+      title.style.color = 'rgb(0, 0, 0)';
+    });
+
+    Array.from(document.getElementsByTagName('a')).forEach((link) => {
+      link.style.color = 'var(--dark-bg)';
+    });
+
+    Array.from(document.getElementsByTagName('div')).forEach((box) => {
+
+      if (box.id === "infoUsuario" || box.classList.contains("login") || box.className === "card") {
+        box.style.backgroundColor = "var(--card-user-claro)";
+        box.style.color = "var(--dark-bg)";
+      } else if (box.className === "buttons") {
+
+        box.querySelectorAll('button').forEach(boton => {
+          boton.style.backgroundColor = "rgb(255, 255, 255)";
+          boton.style.color = "rgb(0, 0, 0)";
+        });
+
+      } else if (box.classList.contains("formulario")) {
+        box.style.backgroundColor = "rgb(255, 255, 255)";
+        box.style.color = "var(--dark-bg)";
+      }
+    });
+  }
 }

@@ -49,8 +49,7 @@
   --claro-dark: var(--dark-bg);
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -60,4 +59,18 @@ body {
 
 form {
   border-color: rgb(0, 0, 0);
+}
+
+.darkMode form, .darkMode #infoUsuario, .darkMode div.card, .darkMode div.login, .darkMode div.formulario {
+  background-color: var(--card-user-oscuro);
+  background-color: var(--white-bg);
+}
+
+.darkMode label {
+  color: rgb(255, 255, 255);
+}
+
+.darkMode input, .darkMode div.buttons button, .darkMode input:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
