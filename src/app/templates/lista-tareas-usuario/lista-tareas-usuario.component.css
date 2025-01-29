@@ -18,12 +18,19 @@ h1{
   justify-content: center;
   margin-right: 20rem;
   font-family: var(--letra-inter);
-  color: var(--claro-letra);
   margin-top: 20px;
 }
 
-p{
+h1:not(body.darkMode h1) {
+  color: var(--claro-letra);
+}
+
+p {
   text-align: center;
+}
+
+a:not(body.darkMode a) {
+  color: var(--claro-letra);
 }
 
 @media (max-width: 576px) {
