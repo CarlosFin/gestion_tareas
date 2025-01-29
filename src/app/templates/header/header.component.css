@@ -1,11 +1,14 @@
-.color-header {
+.color-header:not(body.darkMode .color-header) {
   background-color: var(--color-header-claro);
+}
+
+a:not(body.darkMode .color-header) {
+  color: var(--dark-bg);
 }
 
 li a {
   font-family: var(--letra-inter);
   font-size: var(--letra-tamano-inter);
-  color: var(--dark-bg);
 }
 
 .img_logo {

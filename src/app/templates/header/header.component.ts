@@ -65,7 +65,7 @@ export class HeaderComponent {
     Array.from(document.getElementsByTagName('div')).forEach((box) => {
 
       if (box.id === "infoUsuario" || box.classList.contains("login") || box.className === "card") {
-        box.style.backgroundColor = "var(--card-user-claro)";
+        box.style.backgroundColor = "var(--white-bg)";
         box.style.color = "var(--dark-bg)";
       } else if (box.className === "buttons") {
 

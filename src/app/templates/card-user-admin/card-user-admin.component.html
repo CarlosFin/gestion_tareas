@@ -8,15 +8,15 @@
 
   <div class="buttons">
 
-    <button [routerLink]="['/formulario-usuario-ver', usuario.id]" [queryParams]="{nombre: usuario.nombre, departamento: usuario.departamento, correo: usuario.correo, foto: usuario.foto}">
+    <button [routerLink]="['/formulario-usuario-ver', usuario.id]" [queryParams]="{nombre: usuario.nombre, departamento: usuario.departamento, correo: usuario.correo, foto: usuario.foto}" (click)="changeStyle">
       <i class="material-icons color_blue">visibility</i>
     </button>
 
-    <button [routerLink]="['/formulario-usuario-editar', usuario.id]" [queryParams]="{nombre: usuario.nombre, departamento: usuario.departamento, correo: usuario.correo, foto: usuario.foto}">
+    <button [routerLink]="['/formulario-usuario-editar', usuario.id]" [queryParams]="{nombre: usuario.nombre, departamento: usuario.departamento, correo: usuario.correo, foto: usuario.foto}" (click)="changeStyle">
       <i class="material-icons color_yellow">mode_edit</i>
     </button>
 
-    <button (click)="eliminarUsuario(usuario.id)">
+    <button (click)="eliminarUsuario(usuario.id)" (click)="changeStyle">
       <i class="material-icons color_red">delete</i>
     </button>
 
