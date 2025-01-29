@@ -61,6 +61,10 @@ form {
   border-color: rgb(0, 0, 0);
 }
 
+.darkMode h1 {
+  color: var(--white-bg);
+}
+
 .darkMode a, .darkMode .nav-link {
   color: var(--white-bg);
 }

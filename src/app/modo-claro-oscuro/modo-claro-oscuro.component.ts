@@ -41,8 +41,8 @@ export class ModoClaroOscuroComponent {
         link.style.color = 'var(--white-bg)';
       });
 
-      Array.from(this.texto).forEach(link => {
-        link.style.color = 'var(--white-bg)';
+      Array.from(this.texto).forEach(text => {
+        text.style.color = 'var(--white-bg)';
       });
 
       Array.from(this.areaTexto).forEach(textArea => {
@@ -86,8 +86,8 @@ export class ModoClaroOscuroComponent {
         link.style.color = 'var(--dark-bg)';
       });
 
-      Array.from(this.texto).forEach(link => {
-        link.style.color = 'var(--dark-bg)';
+      Array.from(this.texto).forEach(text => {
+        text.style.color = 'var(--dark-bg)';
       });
 
       Array.from(this.areaTexto).forEach(textArea => {
@@ -97,8 +97,8 @@ export class ModoClaroOscuroComponent {
 
       Array.from(this.caja).forEach(box => {
 
-        if (box.id === "infoUsuario" || box.classList.contains("login") || box.className === "card") {
-          box.style.backgroundColor = "var(--white-bg)";
+        if (box.id === "infoUsuario" || box.classList.contains("login")) {
+          box.style.backgroundColor = "var(--card-user-claro)";
           box.style.color = "var(--dark-bg)";
         } else if (box.className === "buttons") {
 
@@ -107,7 +107,7 @@ export class ModoClaroOscuroComponent {
             boton.style.color = "rgb(0, 0, 0)";
           });
 
-        } else if (box.classList.contains("formulario")) {
+        } else if (box.classList.contains("formulario") || box.className === "card") {
           box.style.backgroundColor = "rgb(255, 255, 255)";
           box.style.color = "var(--dark-bg)";
         }

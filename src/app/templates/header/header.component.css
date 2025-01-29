@@ -2,7 +2,7 @@
   background-color: var(--color-header-claro);
 }
 
-a:not(body.darkMode .color-header) {
+a:not(body.darkMode .nav-link) {
   color: var(--dark-bg);
 }
 

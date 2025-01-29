@@ -43,8 +43,8 @@ export class CardAdminComponent {
       document.body.classList.add("darkMode");
       document.body.style.backgroundColor = 'var(--dark-bg)';
 
-      Array.from(this.enlace).forEach(link => {
-        link.style.color = 'var(--white-bg)';
+      Array.from(this.enlace).forEach(text => {
+        text.style.color = 'var(--white-bg)';
       });
 
       this.isDarkMode = true;
@@ -57,8 +57,8 @@ export class CardAdminComponent {
       document.body.classList.remove("darkMode");
       document.body.style.backgroundColor = 'var(--white-bg)';
 
-      Array.from(this.enlace).forEach(link => {
-        link.style.color = 'var(--dark-bg)';
+      Array.from(this.enlace).forEach(text => {
+        text.style.color = 'var(--dark-bg)';
       });
 
       this.isDarkMode = false;

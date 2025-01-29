@@ -64,7 +64,7 @@ export class HeaderAdminComponent {
 
     Array.from(document.getElementsByTagName('div')).forEach((box) => {
 
-      if (box.id === "infoUsuario" || box.classList.contains("login") || box.className === "card") {
+      if (box.id === "infoUsuario" || box.classList.contains("login")) {
         box.style.backgroundColor = "var(--card-user-claro)";
         box.style.color = "var(--dark-bg)";
       } else if (box.className === "buttons") {
@@ -74,7 +74,7 @@ export class HeaderAdminComponent {
           boton.style.color = "rgb(0, 0, 0)";
         });
 
-      } else if (box.classList.contains("formulario")) {
+      } else if (box.classList.contains("formulario") || box.className === "card") {
         box.style.backgroundColor = "rgb(255, 255, 255)";
         box.style.color = "var(--dark-bg)";
       }

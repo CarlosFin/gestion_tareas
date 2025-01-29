@@ -16,16 +16,16 @@ export class BotonSuccessComponent {
 
     if (!this.isDarkMode) {
 
-      Array.from(this.texto).forEach(link => {
-        link.style.color = 'var(--white-bg)';
+      Array.from(this.texto).forEach(text => {
+        text.style.color = 'var(--white-bg)';
       });
 
       this.isDarkMode = true;
 
     } else {
 
-      Array.from(this.texto).forEach(link => {
-        link.style.color = 'var(--dark-bg)';
+      Array.from(this.texto).forEach(text => {
+        text.style.color = 'var(--dark-bg)';
       });
 
       this.isDarkMode = false;
