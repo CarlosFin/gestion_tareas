@@ -8,15 +8,15 @@
 
   <div class="buttons">
 
-    <button [routerLink]="['/formulario-tarea-ver-admin', tarea.id]" [queryParams]="{ nombre: tarea.nombre, descripcion: tarea.descripcion, correo: tarea.correo, usuario: tarea.usuario, departamento: tarea.departamento }">
+    <button [routerLink]="['/formulario-tarea-ver-admin', tarea.id]" [queryParams]="{ nombre: tarea.nombre, descripcion: tarea.descripcion, correo: tarea.correo, usuario: tarea.usuario, departamento: tarea.departamento }" (click)="changeStyle">
       <i class="material-icons color_blue">visibility</i>
     </button>
 
-    <button [routerLink]="['/formulario-tarea-editar-admin', tarea.id]" [queryParams]="{ nombre: tarea.nombre, descripcion: tarea.descripcion, correo: tarea.correo, usuario: tarea.usuario, departamento: tarea.departamento }">
+    <button [routerLink]="['/formulario-tarea-editar-admin', tarea.id]" [queryParams]="{ nombre: tarea.nombre, descripcion: tarea.descripcion, correo: tarea.correo, usuario: tarea.usuario, departamento: tarea.departamento }" (click)="changeStyle">
       <i class="material-icons color_yellow">mode_edit</i>
     </button>
 
-    <button [style.display]="visualizacion" (click)="eliminarTarea(tarea.id)">
+    <button [style.display]="visualizacion" (click)="eliminarTarea(tarea.id)" (click)="changeStyle">
       <i class="material-icons color_red">delete</i>
     </button>
 

@@ -61,16 +61,37 @@ form {
   border-color: rgb(0, 0, 0);
 }
 
-.darkMode form, .darkMode #infoUsuario, .darkMode div.card, .darkMode div.login, .darkMode div.formulario {
+.darkMode a, .darkMode .nav-link {
+  color: var(--white-bg);
+}
+
+.darkMode form,
+.darkMode #infoUsuario,
+.darkMode .card,
+.darkMode .login,
+.darkMode .formulario {
   background-color: var(--card-user-oscuro);
-  background-color: var(--white-bg);
+  color: var(--white-bg);
+}
+
+.darkMode nav {
+  background-color: var(--color-header-oscuro);
 }
 
 .darkMode label {
   color: rgb(255, 255, 255);
 }
 
-.darkMode input, .darkMode div.buttons button, .darkMode input:hover {
+.darkMode input, .darkMode .buttons button, .darkMode input:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.darkMode p {
+  color: rgb(255, 255, 255);
+}
+
+.darkMode textarea {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }

@@ -14,6 +14,7 @@ export class ModoClaroOscuroComponent {
   caja: HTMLCollectionOf<HTMLDivElement> = document.getElementsByTagName('div');
   formulario: HTMLCollectionOf<HTMLFormElement> = document.getElementsByTagName("form");
   areaTexto: HTMLCollectionOf<HTMLTextAreaElement> = document.getElementsByTagName("textarea");
+  texto: HTMLCollectionOf<HTMLElement> = document.getElementsByTagName("p");
 
   isDarkMode: Boolean = document.body.classList.contains("darkMode");
   indice: Number = 0;
@@ -28,7 +29,6 @@ export class ModoClaroOscuroComponent {
       document.body.classList.add("darkMode");
       document.body.style.backgroundColor = 'var(--dark-bg)';
 
-
       Array.from(this.barraNavegacion).forEach(nav => {
         nav.style.backgroundColor = 'var(--color-header-oscuro)';
       });
@@ -38,6 +38,10 @@ export class ModoClaroOscuroComponent {
       });
 
       Array.from(this.enlace).forEach(link => {
+        link.style.color = 'var(--white-bg)';
+      });
+
+      Array.from(this.texto).forEach(link => {
         link.style.color = 'var(--white-bg)';
       });
 
@@ -82,6 +86,10 @@ export class ModoClaroOscuroComponent {
         link.style.color = 'var(--dark-bg)';
       });
 
+      Array.from(this.texto).forEach(link => {
+        link.style.color = 'var(--dark-bg)';
+      });
+
       Array.from(this.areaTexto).forEach(textArea => {
         textArea.style.backgroundColor = "rgb(255, 255, 255)";;
         textArea.style.color = "rgb(0, 0, 0)";
@@ -90,7 +98,7 @@ export class ModoClaroOscuroComponent {
       Array.from(this.caja).forEach(box => {
 
         if (box.id === "infoUsuario" || box.classList.contains("login") || box.className === "card") {
-          box.style.backgroundColor = "var(--card-user-claro)";
+          box.style.backgroundColor = "var(--white-bg)";
           box.style.color = "var(--dark-bg)";
         } else if (box.className === "buttons") {
 
